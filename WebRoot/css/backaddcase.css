@@ -1,0 +1,30 @@
+.addcase_head_left  span{
+	font-size: 20px;
+}
+.addcase_all{
+	padding-top: 30px;
+}
+.case_class label{
+	font-size: 17px;
+}
+.addcase_head_right img{
+	width: 200px;
+	height: 200px;
+}
+.each_img_fen{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.addcase_sub_button{
+	float: right;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.start_upload{
+	float: left;
+}
+.input_file{
+	float: left;
+}

@@ -1,0 +1,30 @@
+.team_body{
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.body_each img{
+	width: 250px;
+	height: 250px;
+}
+.body_each_left{
+	/*margin-right: 20px;*/
+	/*float: left;*/
+}
+.body_each_right{
+	/*margin-left: 20px;*/
+	/*float: left;*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.body_each{
+	margin-top: 30px;
+}
+.team_body_head {
+	text-align: center;
+	background-color: #C0C0C0;
+}
+.team_body_body{
+	margin-top: 100px;
+}

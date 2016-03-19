@@ -1,0 +1,39 @@
+.imgbutton{
+	width: 80px;
+}
+.showallcase{
+	text-align: center;
+}
+.createtime{
+	width: 150px;
+	
+}
+.each_line{
+	margin-top: 30px;
+
+}
+.editcaseinfor_all{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.editcase_head_left span{
+	font-size: 20px;
+}
+.editcase_sub_button{
+	width: 100%;
+}
+.each_img img{
+	width: 200px;
+	height: 200px;
+	margin-top: 2px;
+}
+.each_img{
+	margin: 10px;
+	float: left;
+}
+.upload_img_div{
+	padding:20px;
+}
+.upload_img_div span{
+	font-size: 20px;
+}

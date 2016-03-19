@@ -1,0 +1,85 @@
+.case_body{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.case_nav{
+	float: left;
+	width: 20%;
+}
+.case_show{
+	float: left;
+	width: 77%;
+	margin-left: 3%;
+}
+.case_nav a{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	font-size: 16px;
+}
+.case_cloud{
+	font-size: 30px;
+	text-align: center;
+}
+.each_case{
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 20px;
+	border: 2px solid #DDDDDD;
+	border-radius: 0px, 0px, 5px, 5px;
+}
+.case_img{
+}
+.case_infor{
+	text-align: center;
+	padding-top: 15px;
+	height: 70px;
+	font-size: 17px;
+	line-height: 22px;
+}
+.each_case a:link{
+	color: black;
+	text-decoration:none;
+}
+.each_case a:hover{
+	color: #FF0000;
+	text-decoration:none;
+}
+/*图片展示css start*/
+.show_eachcase_all{
+	float: left;
+	margin-left: 5%;
+}
+.container{
+	width: 600px;
+}
+.show_eachcase_all li{
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.container img{
+	width: 100px;
+	height: 100px;
+}
+.gallery li:nth-child(6n){padding-right:0;}
+.show_eachcase_nav{
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+/*图片展示css end*/
+.show_eachcase_info{
+	margin-bottom: 30px;
+}
+.show_eachcase_info pre{
+	background: #FFFFFF;
+	border: none;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

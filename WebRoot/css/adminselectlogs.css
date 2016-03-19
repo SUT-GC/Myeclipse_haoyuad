@@ -1,0 +1,16 @@
+.alluser span{
+	font-size: 20px;
+}
+.selectlogs_all{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.oneuserlog span{
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+.oneuserlog a{
+	margin-top: 20px;
+}

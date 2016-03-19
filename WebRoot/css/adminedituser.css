@@ -1,0 +1,23 @@
+.edituser{
+	width: 100px;
+}
+.deluser{
+	width: 100px;
+}
+.showuser_all{
+	text-align: center;
+}
+.line{
+	margin: 20px;
+}
+.line span{
+	font-size: 20px;
+}
+.button_submitedituser{
+	margin-top: 20px;
+	width: 100%;
+}
+.button_closeedituser{
+	margin-top: 20px;
+	width: 100%;
+}

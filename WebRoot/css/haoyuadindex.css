@@ -1,0 +1,62 @@
+.wraper{
+}
+
+.lunmu{
+	margin-top: 5px;
+	height: 400px;
+}
+.lunmu .item img{
+	width:100%; height:400px;
+}
+.indeximg{
+	margin-top: 5px;
+	width: 100%;
+	height: 400px;
+	background-color:#99FF00;
+}
+.works_body li{
+	float: left;
+	margin: 3px;
+}
+.clear{
+	clear: both;
+}
+.works_pre{
+	float: left;
+	width: 25px;
+}
+.works_next{
+	float: left;
+}
+.showworks{
+	margin-top: 10px;
+}
+.works{
+	background-image: url(../images/qiangzhi.jpg);
+	/*background-color: #FFFFFF;*/
+	margin-bottom:5px;
+}
+
+.works_img{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.works_img_dis{
+	text-align: center;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	margin-left: 10px;
+	font-size: 18px;
+	margin-top: 5px;
+}
+.works_head{
+	font-size: 28px;
+	padding-top: 20px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+.works_pre span{
+	padding-left: 10px;	
+	
+}

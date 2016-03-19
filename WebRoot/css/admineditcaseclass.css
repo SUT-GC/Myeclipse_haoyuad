@@ -1,0 +1,21 @@
+.editclass{
+	width: 100px;
+}
+.delclass{
+	width: 100px;
+}
+.button_editcaseclassok{
+	margin-top: 50px;
+	width: 100%;
+}
+.button_editcaseclassno{
+	margin-top: 20px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.input_classname{
+	font-size: 20px;
+}
+.editonecase_all{
+	margin-top:  50px;
+}
