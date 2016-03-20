@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -52,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员：<b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员：<s:property value="#session.username"/> <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				  <li><a href="#">账户中心</a></li>
                                                           <li class="divider"></li>

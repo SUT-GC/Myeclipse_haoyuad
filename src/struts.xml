@@ -27,6 +27,11 @@
 		</result>
 	</action>
 	
+	<!-- 注销用户 -->
+	<action name="outlogin" class="control.outlogin.OutLogin">
+		<result>/WEB-INF/jsp/backlogin.jsp</result>
+	</action>
+	
 	<!-- 添加用户界面 -->
 	<action name="adminadduser">
 		<result name="success">/WEB-INF/jsp/adminadduser.jsp</result>
