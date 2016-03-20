@@ -29,7 +29,8 @@
 	
 	<!-- 添加用户界面 -->
 	<action name="adminadduser">
-		<result>/WEB-INF/jsp/adminadduser.jsp</result>
+		<result name="success">/WEB-INF/jsp/adminadduser.jsp</result>
+		<result name="sessionout">/WEB-INF/jsp/backlogin.jsp</result>
 		<!-- 配置系统默认拦截器 -->
 		<interceptor-ref name="defaultStack"></interceptor-ref>
 		<!-- 配置检测session的拦截器 -->

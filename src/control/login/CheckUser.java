@@ -4,6 +4,10 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
 import util.MD5Util;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -58,7 +62,17 @@ public class CheckUser extends ActionSupport {
 			Admin admin = list.get(0);
 			//比对用户输入的密码是否正确
 			if(MD5Util.compareStringAndMD5(userpass, admin.getPass())){
-				//密码验证正确
+				/*
+				 * 密码验证正确
+				 */
+				
+				//进行session写入
+				HttpSession session = ServletActionContext.getRequest().getSession();
+				session.setAttribute("userid", admin.getId());
+				session.setAttribute("useraccount", admin.getAccount());
+				session.setAttribute("username", admin.getName());
+				session.setAttribute("userpower", admin.getPower());
+				
 				//检查是否是超级管理员
 				if(admin.getPower() == 1){
 					//是。result=1
