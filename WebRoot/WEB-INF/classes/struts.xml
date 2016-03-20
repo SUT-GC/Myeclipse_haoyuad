@@ -2,18 +2,38 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 <package name="back" namespace="/" extends="struts-default" >
+	<!-- 注册拦截器  start-->
+	<interceptors>
+		<!-- adminsession的拦截器 -->
+		<interceptor name="adminsession" class="interceptor.AdminSessionIntercepter"></interceptor>
+		
+		
+	</interceptors>
+	<!-- 注册拦截器  end-->
+	
+	<!-- 测试struts 所用的action -->
 	<action name="backindex" class="test">
 		<result>/WEB-INF/index.jsp</result>
 	</action>
 	<action name="backlogin">
 		<result>/WEB-INF/jsp/backlogin.jsp</result>
 	</action>
+	
 	<!-- ajax 检查用户信息 ， 决定跳转的页面-->
 	<action name="checkuser" class="control.login.CheckUser">
 		<result type="stream">
 			<param name="contentType">text/html</param>
 			<param name="inputName">inputStream</param>
 		</result>
+	</action>
+	
+	<!-- 添加用户界面 -->
+	<action name="adminadduser">
+		<result>/WEB-INF/jsp/adminadduser.jsp</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测session的拦截器 -->
+		<interceptor-ref name="adminsession"></interceptor-ref>
 	</action>
 </package>
 </struts>    
