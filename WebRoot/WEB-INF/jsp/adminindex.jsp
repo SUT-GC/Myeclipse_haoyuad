@@ -1,11 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
         <title>浩宇广告公司后台</title>
@@ -13,19 +12,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Bootstrap -->
-        <link href="<%=path%>/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="<%=path%>/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 
         <!-- Bootstrap Admin Theme -->
-        <link href="<%=path%>/css/bootstrap-admin-theme.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/css/bootstrap-admin-theme.css" rel="stylesheet" media="screen">
 
         <!-- Vendors -->
-        <link href="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
-        <link href="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart_custom.css" rel="stylesheet" media="screen">
-
-        <!--adminshowcase.css .js start-->
-        <link rel="stylesheet" type="text/css" href="<%=path%>/css/adminadduser.css">
-        <!--adminshowcase.css .js end-->
+        <link href="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart_custom.css" rel="stylesheet" media="screen">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -74,10 +69,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <!-- left, vertical navbar -->
                 <div class="col-md-2 bootstrap-admin-col-left">
                      <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
-                         <li >
+                         <li class="active">
                             <a href="adminindex"><i class="glyphicon glyphicon-chevron-right"></i> 使用帮助文档</a>
                         </li>
-                        <li >
+                        <li>
                             <a href="adminshowcase.html"><i class="glyphicon glyphicon-chevron-right"></i>案例首页展示</a>
                         </li>
 	          <li >
@@ -86,7 +81,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <li >
                             <a href="admineditcaseclass.html"><i class="glyphicon glyphicon-chevron-right"></i>管理案例分类</a>
                         </li>                       
-                        <li class="active">
+                        <li>
                             <a href="adminadduser"><i class="glyphicon glyphicon-chevron-right"></i>添加普通用户</a>
                         </li>
                         <li>
@@ -94,51 +89,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </li>
                         <li>
                             <a href="adminselectlogs.html"><i class="glyphicon glyphicon-chevron-right"></i>查询操作记录</a>
-                        </li>
-                        
+                        </li>                        
                     </ul>
                 </div>
 
                 <!-- content -->
                 <div class="col-md-10">
                     <div class="row">
-                        <div class="panel panel-default bootstrap-admin-no-table-panel">
-                            <div class="panel-heading">
-                                <div class="text-muted bootstrap-admin-box-title">添加普通用户</div>
-                            </div>
-                            <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
-                                <div class="adduser_all">
-                                    <div class="line row">
-                                        <div class="line_left col-md-2">
-                                            <span>用户姓名：</span>
-                                        </div>
-                                        <div class="line_right col-md-10">
-                                            <input type="text" class="form-control" placeholder="请输入新用户的姓名，不允许有空格或非法字符（不能为空）">
-                                        </div>
-                                    </div>
-                                    <div class="line row">
-                                        <div class="line_left col-md-2">
-                                            <span>用户账号：</span>
-                                        </div>
-                                        <div class="line_right col-md-10">
-                                            <input type="text" class="form-control" placeholder="请输入新用户的账号，必须全是数字，且不能低于8位（不能为空）">
-                                        </div>
-                                    </div>
-                                    <div class="line row">
-                                        <div class="line_left col-md-2">
-                                            <span>用户密码：</span>
-                                        </div>
-                                        <div class="line_right col-md-10">
-                                            <input type="text" class="form-control" placeholder="请输入新用户的密码，如果不输入，默认密码为000000">
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <button type="button" class="btn  button_submitadduser btn-success">确认添加</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="alert alert-success bootstrap-admin-alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <h4>恭喜超级管理员:<a>gc</a>，登陆成功</h4>
+                            登陆时间：2016-03-03 18:07 &nbsp;&nbsp;&nbsp;&nbsp;   登陆 IP : 192.168.1.1 &nbsp;&nbsp;&nbsp;&nbsp;  登陆地址：辽宁省朝阳市建平县  
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -154,8 +118,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script type="text/javascript" src="<%=path%>/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+        <script type="text/javascript" src="<%=path %>/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
 
         <script type="text/javascript">
             $(function() {

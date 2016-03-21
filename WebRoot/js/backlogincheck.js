@@ -33,7 +33,7 @@ $(document).ready(function(){
 		if(result == 1){
 			$.post("checkuser?useraccount="+useraccount+"&userpass="+userpass, function(data){
 				if(data == 1){
-					alert("超级管理员");
+					window.location.href="adminindex"
 				}else if(data == 8){
 					alert("普通管理员");
 				}else{

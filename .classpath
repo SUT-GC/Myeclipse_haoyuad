@@ -45,5 +45,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mysql-connector-java-5.1.30-bin.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/bcprov-jdk16-146.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/gcutil.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
