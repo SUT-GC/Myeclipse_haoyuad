@@ -33,7 +33,7 @@
 	</action>
 	
 	<!-- adminindex 页面的跳转 -->
-	<action name="adminindex">
+	<action name="adminindex" class="control.jspmap.AdminIndex">
 		<result name="success">/WEB-INF/jsp/adminindex.jsp</result>
 		<result name="sessionout">/WEB-INF/jsp/backlogin.jsp</result>
 		<!-- 配置系统默认拦截器 -->

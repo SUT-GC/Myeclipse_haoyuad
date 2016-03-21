@@ -46,5 +46,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/bcprov-jdk16-146.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/gcutil.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

@@ -41,4 +41,12 @@
 	
 	<!-- 配置control bean -->
 	<bean id="test" class="control.test"></bean>
+	
+	<!-- 配置获取ip地址的bean -->
+	<bean id="showAddress" class="select.ip.ShowAddress" scope="singleton">
+		<constructor-arg  value="bcf69b3f618d1ca364def3583f6abaaf"/>
+	</bean>
+	
+	<!-- 创建Date的bean -->
+	<bean id="date" class="java.util.Date" scope="prototype"></bean>
 </beans>

@@ -98,8 +98,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <div class="row">
                         <div class="alert alert-success bootstrap-admin-alert">
                             <button type="button" class="close" data-dismiss="alert">×</button>
-                            <h4>恭喜超级管理员:<a>gc</a>，登陆成功</h4>
-                            登陆时间：2016-03-03 18:07 &nbsp;&nbsp;&nbsp;&nbsp;   登陆 IP : 192.168.1.1 &nbsp;&nbsp;&nbsp;&nbsp;  登陆地址：辽宁省朝阳市建平县  
+                            <h4>恭喜超级管理员:<a><s:property value="#session.username"/> </a>，登陆成功</h4>
+                            登陆时间：${formatDate} &nbsp;&nbsp;&nbsp;&nbsp;   登陆 IP : ${ip } &nbsp;&nbsp;&nbsp;&nbsp;  登陆地址：${ipaddress }  
                         </div>
                     </div>
 
