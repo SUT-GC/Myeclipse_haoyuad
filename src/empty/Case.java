@@ -103,7 +103,13 @@ public class Case {
 	public void setLabels(Set<Label> labels) {
 		this.labels = labels;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Case [id=" + id + ", name=" + name + ", describe=" + describe
+				+ ", headimg=" + headimg + ", images=" + images
+				+ ", timestamp=" + timestamp + ", show=" + show + "]";
+	}
 	
 
 }

@@ -2,18 +2,26 @@ package control.login;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.struts2.ServletActionContext;
 
+import select.ip.ShowAddress;
+import util.ApplicationContextUtil;
+import util.DateFormatUtil;
 import util.MD5Util;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import control.jspmap.AdminIndex;
 import dao.operate.AdminDao;
+import dao.operate.AdminLoginInforDao;
 import empty.Admin;
+import empty.AdminLoginInfo;
 
 public class CheckUser extends ActionSupport {
 	private String useraccount;
@@ -73,10 +81,39 @@ public class CheckUser extends ActionSupport {
 				session.setAttribute("username", admin.getName());
 				session.setAttribute("userpower", admin.getPower());
 				
+				
+				/*
+				 * 开始写入登陆记录
+				 */
+				//获取登陆ip 与登陆地址
+				String ip = ServletActionContext.getRequest().getRemoteAddr();
+				String ipaddress = "";
+				if(ip.equals("0:0:0:0:0:0:0:1")){
+					ipaddress="本地回环网络";
+				}else{
+					ipaddress = ApplicationContextUtil.getApplicationContext().getBean("showAddress", ShowAddress.class).getResult(ip);
+				}
+				//格式化登陆日期
+				String logindate = "";
+				logindate = DateFormatUtil.dateFormatToyyyyMMddHHmmss( ApplicationContextUtil.getApplicationContext().getBean("date",Date.class));
+				
+				
 				//检查是否是超级管理员
 				if(admin.getPower() == 1){
 					//是。result=1
 					result ="1";
+					//创建登陆记录
+					AdminLoginInfo adminLoginInfo = ApplicationContextUtil.getApplicationContext().getBean("adminLoginInfor", AdminLoginInfo.class);
+					adminLoginInfo.setAdminid(admin.getId());
+					//为了防止ipaddress导致数据库出现问题，吧ipaddress base64之后进行存储
+					adminLoginInfo.setLoginaddress(Base64.encodeBase64String(ipaddress.getBytes()));
+					adminLoginInfo.setLoginip(ip);
+					adminLoginInfo.setLogindate(logindate);
+					adminLoginInfo.setLoginaccount(admin.getAccount());
+					System.out.println(adminLoginInfo);
+					//将AdminLoginInfor添加进入数据库
+					AdminLoginInforDao.addAdminLoginInfor(adminLoginInfo);
+					
 				}else{
 					//不是，result= 8
 					result ="8";

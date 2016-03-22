@@ -35,6 +35,7 @@
 				<value>empty.Admin</value>
 				<value>empty.Case</value>
 				<value>empty.Label</value>
+				<value>empty.AdminLoginInfo</value>
 			</list>
 		</property>	
 	</bean>
@@ -49,4 +50,7 @@
 	
 	<!-- 创建Date的bean -->
 	<bean id="date" class="java.util.Date" scope="prototype"></bean>
+	
+	<!-- 创建AdminLoginInfor的对象，时间对超级管理员登陆记录的记录 -->
+	<bean id="adminLoginInfor" class="empty.AdminLoginInfo" scope="prototype"></bean>
 </beans>

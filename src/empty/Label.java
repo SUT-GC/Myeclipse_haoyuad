@@ -54,5 +54,9 @@ public class Label {
 		this.cases = cases;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Label [id=" + id + ", name=" + name + "]";
+	}
+
 }
