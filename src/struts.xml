@@ -42,6 +42,14 @@
 		<interceptor-ref name="adminsession"></interceptor-ref>
 	</action>
 	
+	<!-- AddUser 的ajax -->
+	<action name="adduser" class="control.add.AddUser">
+		<result type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+	</action>
+	
 	<!-- 添加用户界面 -->
 	<action name="adminadduser">
 		<result name="success">/WEB-INF/jsp/adminadduser.jsp</result>

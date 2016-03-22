@@ -53,4 +53,7 @@
 	
 	<!-- 创建AdminLoginInfor的对象，时间对超级管理员登陆记录的记录 -->
 	<bean id="adminLoginInfor" class="empty.AdminLoginInfo" scope="prototype"></bean>
+	
+	<!-- 创建新的Admin -->
+	<bean id="newAdmin" class="empty.Admin" scope="prototype"></bean>
 </beans>

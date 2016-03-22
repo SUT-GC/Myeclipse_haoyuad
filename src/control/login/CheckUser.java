@@ -78,7 +78,7 @@ public class CheckUser extends ActionSupport {
 				HttpSession session = ServletActionContext.getRequest().getSession();
 				session.setAttribute("userid", admin.getId());
 				session.setAttribute("useraccount", admin.getAccount());
-				session.setAttribute("username", admin.getName());
+				session.setAttribute("username", new String (Base64.decodeBase64(admin.getName())));
 				session.setAttribute("userpower", admin.getPower());
 				
 				

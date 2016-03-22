@@ -113,7 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>用户姓名：</span>
                                         </div>
                                         <div class="line_right col-md-10">
-                                            <input type="text" class="form-control" placeholder="请输入新用户的姓名，不允许有空格或非法字符（不能为空）">
+                                            <input type="text" class="form-control newusername" placeholder="请输入新用户的姓名，不允许有空格或非法字符（不能为空）">
                                         </div>
                                     </div>
                                     <div class="line row">
@@ -121,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>用户账号：</span>
                                         </div>
                                         <div class="line_right col-md-10">
-                                            <input type="text" class="form-control" placeholder="请输入新用户的账号，必须全是数字，且不能低于8位（不能为空）">
+                                            <input type="text" class="form-control newuseraccount" placeholder="请输入新用户的账号，必须全是数字，且不能低于8位（不能为空）">
                                         </div>
                                     </div>
                                     <div class="line row">
@@ -129,13 +129,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>用户密码：</span>
                                         </div>
                                         <div class="line_right col-md-10">
-                                            <input type="text" class="form-control" placeholder="请输入新用户的密码，如果不输入，默认密码为000000">
+                                            <input type="text" class="form-control newuserpass" placeholder="请输入新用户的密码，如果不输入，默认密码为000000">
                                         </div>
                                     </div>
                                     <div class="line">
                                         <button type="button" class="btn  button_submitadduser btn-success">确认添加</button>
                                     </div>
                                 </div>
+                                <div class="result" style="font-size:20px; color:red; margin-top:20px;"></div>
                             </div>
                         </div>
                     </div>
@@ -152,7 +153,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-
+		<script type="text/javascript" src = "<%=path%>/js/adminadduser.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="<%=path%>/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
