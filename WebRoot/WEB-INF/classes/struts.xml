@@ -6,8 +6,8 @@
 	<interceptors>
 		<!-- adminsession的拦截器 -->
 		<interceptor name="adminsession" class="interceptor.AdminSessionIntercepter"></interceptor>
-		
-		
+		<!-- 配置ajaxsession拦截器， 拦截session过期操作 -->
+		<interceptor name="ajaxsession" class="interceptor.AjaxSessionIntercepter"></interceptor>
 	</interceptors>
 	<!-- 注册拦截器  end-->
 	
@@ -44,10 +44,19 @@
 	
 	<!-- AddUser 的ajax -->
 	<action name="adduser" class="control.add.AddUser">
-		<result type="stream">
+		<result name="success" type="stream">
 			<param name="inputType">text/html</param>
 			<param name="inputName">inputStream</param>
 		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
+	<!-- session过期页面 -->
+	<action name="sessionout" >
+		<result>/WEB-INF/jsp/sessionout.jsp</result>
 	</action>
 	
 	<!-- 添加用户界面 -->

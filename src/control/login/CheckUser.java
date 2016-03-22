@@ -80,7 +80,7 @@ public class CheckUser extends ActionSupport {
 				session.setAttribute("useraccount", admin.getAccount());
 				session.setAttribute("username", new String (Base64.decodeBase64(admin.getName())));
 				session.setAttribute("userpower", admin.getPower());
-				
+				session.setAttribute("sessionout", "no");
 				
 				/*
 				 * 开始写入登陆记录

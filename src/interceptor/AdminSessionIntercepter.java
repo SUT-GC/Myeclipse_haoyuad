@@ -4,6 +4,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
@@ -29,7 +31,9 @@ public class AdminSessionIntercepter extends AbstractInterceptor {
 		
 		if(session.get("userid") == null ||  session.get("useraccount") == null || session.get("username") == null || session.get("userpower") == null){
 			result =  "sessionout";
+			ServletActionContext.getRequest().getSession().setAttribute("sessionout", "yes");
 		}else{
+			ServletActionContext.getRequest().getSession().setAttribute("sessionout", "no");
 			//获取session中对应的值
 			userid = (Integer) session.get("userid");
 			useraccount = (String) session.get("useraccount");
