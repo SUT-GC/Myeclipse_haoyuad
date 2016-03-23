@@ -19,6 +19,7 @@ import empty.Admin;
  * 2:根据用户account查询用户
  * 3: 根据account删除用户
  * 4: 根据account修改密码
+ * 5: 查询出所有的权限为0 的Admin
  */
 
 public class AdminDao {
@@ -129,5 +130,25 @@ public class AdminDao {
 		
 		return result ;
 	}
+	
+	/**
+	 * 5: 查询出所有的权限为0 的Admin
+	 * @param 没有参数
+	 * @return List <Admin> list
+	 */
+	public static List<Admin> selectFormalAdmin(){
+		List <Admin> list = null;
+		
+		Session session = ApplicationContextUtil.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		list = session.createQuery("select admin From Admin admin where admin.power = 0").list();
+		
+		transaction.commit();
+		session.close();
+		
+		return list;
+	}
+	
 	
 }

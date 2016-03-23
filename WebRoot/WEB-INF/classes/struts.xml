@@ -42,8 +42,42 @@
 		<interceptor-ref name="adminsession"></interceptor-ref>
 	</action>
 	
+	<!-- adminedituser 页面跳转 -->
+	<action name="adminedituser" class="control.jspmap.AdminEditUser">
+		<result name="success">/WEB-INF/jsp/adminedituser.jsp</result>
+		<result name="sessionout">/WEB-INF/jsp/sessionout.jsp</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测session的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
 	<!-- AddUser 的ajax -->
 	<action name="adduser" class="control.add.AddUser">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
+	<!-- 更新用户密码的ajax -->
+	<action name="updateuserpass" class="control.update.UpdateUserPass">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
+	<!-- 删除用户 ajax-->
+	<action name="deleteuser" class="control.delete.DeleteAdmin">
 		<result name="success" type="stream">
 			<param name="inputType">text/html</param>
 			<param name="inputName">inputStream</param>

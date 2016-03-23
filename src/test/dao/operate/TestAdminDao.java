@@ -32,9 +32,13 @@ public class TestAdminDao {
 //		System.out.println(result);
 
 		//测试updataAdminByAccount
-		int result = 0;
-		result = AdminDao.updateAdminByAccount("18804036473", MD5Util.MD5ToString("gc"));
-		System.out.println(result);
+//		int result = 0;
+//		result = AdminDao.updateAdminByAccount("18804036473", MD5Util.MD5ToString("gc"));
+//		System.out.println(result);
+		
+		//测试selectFormalAdmin
+		List <Admin> list = AdminDao.selectFormalAdmin();
+		System.out.println(list.size());
 		
 	}
 

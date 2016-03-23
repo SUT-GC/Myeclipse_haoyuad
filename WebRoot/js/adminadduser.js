@@ -38,8 +38,10 @@ $(document).ready(function(){
 					$(".result").text("");
 				}else 	if(data == -1){
 					alert("添加用户失败，该用户账号已经存在");
+					$(".result").text("");
 				}else if(data == 0){
 					alert("添加用户失败，服务器错误，请联系管理员");
+					$(".result").text("");
 				}else if(data == -2){
 					location.href="sessionout";
 				}else{

@@ -12,19 +12,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <link href="<%=path%>/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="<%=path%>/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 
         <!-- Bootstrap Admin Theme -->
-        <link href="<%=path%>/css/bootstrap-admin-theme.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/css/bootstrap-admin-theme.css" rel="stylesheet" media="screen">
 
         <!-- Vendors -->
-        <link href="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
-        <link href="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart_custom.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+        <link href="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart_custom.css" rel="stylesheet" media="screen">
 
         <!--adminshowcase.css .js start-->
-        <link rel="stylesheet" type="text/css" href="<%=path%>/css/adminadduser.css">
+        <link rel="stylesheet" type="text/css" href="<%=path %>/css/adminedituser.css">
+        <script type="text/javascript" src="<%=path %>/js/adminedituser.js"></script>
         <!--adminshowcase.css .js end-->
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -86,10 +89,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <li >
                             <a href="admineditcaseclass"><i class="glyphicon glyphicon-chevron-right"></i>管理案例分类</a>
                         </li>                       
-                        <li class="active">
+                        <li >
                             <a href="adminadduser"><i class="glyphicon glyphicon-chevron-right"></i>添加普通用户</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="adminedituser"><i class="glyphicon glyphicon-chevron-right"></i>管理普通用户</a>
                         </li>
                         <li>
@@ -101,42 +104,57 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                 <!-- content -->
                 <div class="col-md-10">
-                    <div class="row">
+                    <div class="row showuser">
                         <div class="panel panel-default bootstrap-admin-no-table-panel">
                             <div class="panel-heading">
-                                <div class="text-muted bootstrap-admin-box-title">添加普通用户</div>
+                                <div class="text-muted bootstrap-admin-box-title">管理普通用户</div>
                             </div>
                             <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
-                                <div class="adduser_all">
+                                 <div class="showuser_all">
+                                    <table class="table table-hover">
+                                      <thead>
+                                        <tr><td>#</td><td class="username">用户姓名</td><td class="userid">用户账号</td><td class="edituser">修改密码</td><td class="deluser">删除用户</td></tr>
+                                       </thead>
+                                       <tbody>
+                                       	<s:iterator value="list" status="st">
+                                       		<tr><td><s:property value="#st.index+1"/> </td><td class="username"><s:property value="name"/> </td><td class="useraccount"><s:property value="account"/> </td><td><button class="button_editoneuser"><span class="glyphicon  glyphicon-pencil"></span></button><td><button class="removeuser"><span class="glyphicon glyphicon-remove"></span></button></td></tr>	
+                                       	</s:iterator>
+                                       </tbody>
+                                     </table>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row editoneuser">
+                        <div class="panel panel-default bootstrap-admin-no-table-panel">
+                            <div class="panel-heading">
+                                <div class="text-muted bootstrap-admin-box-title"><a href="#" class="rollback" >管理普通用户</a> / <a >修改密码</a> /<a >勾超</a></div>
+                            </div>
+                            <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
+                                 <div class="editoneuser_all">
+                                 	<h3 style="color:red;">您现在正在修改账号是:<a class="edituseracc"></a>的密码</h3>
                                     <div class="line row">
-                                        <div class="line_left col-md-2">
-                                            <span>用户姓名：</span>
+                                        <div class="line_left col-md-3">
+                                            <span>请输入新密码：</span>
                                         </div>
-                                        <div class="line_right col-md-10">
-                                            <input type="text" class="form-control newusername" placeholder="请输入新用户的姓名，不允许有空格或非法字符（不能为空）">
+                                        <div class="line_right col-md-9">
+                                            <input type="password" class="form-control input_newpass"  placeholder="请输入新的用户密码，密码由英文字母与数字组成，密码不能为空">
                                         </div>
                                     </div>
                                     <div class="line row">
-                                        <div class="line_left col-md-2">
-                                            <span>用户账号：</span>
+                                        <div class="line_left col-md-3">
+                                            <span>请再次输入新密码：<span>
                                         </div>
-                                        <div class="line_right col-md-10">
-                                            <input type="text" class="form-control newuseraccount" placeholder="请输入新用户的账号，必须全是数字，且不能低于8位（不能为空）">
-                                        </div>
-                                    </div>
-                                    <div class="line row">
-                                        <div class="line_left col-md-2">
-                                            <span>用户密码：</span>
-                                        </div>
-                                        <div class="line_right col-md-10">
-                                            <input type="text" class="form-control newuserpass" placeholder="请输入新用户的密码，如果不输入，默认密码为000000">
+                                        <div class="line_right col-md-9">
+                                            <input type="password" class="form-control tinput_newpass" placeholder="请输入再次新的用户密码，密码由英文字母与数字组成，密码不能为空">
                                         </div>
                                     </div>
+                                    <div class="result" style="font-size:20px; color:red; margin-top:20px;"></div>
                                     <div class="line">
-                                        <button type="button" class="btn  button_submitadduser btn-success">确认添加</button>
+                                        <button type="button" class="btn  button_submitedituser btn-success">确认修改</button>
+                                         <button type="button" class="btn  button_closeedituser btn-primary">取消修改</button>
                                     </div>
-                                </div>
-                                <div class="result" style="font-size:20px; color:red; margin-top:20px;"></div>
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -153,10 +171,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src = "<%=path%>/js/adminadduser.js"></script>
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script type="text/javascript" src="<%=path%>/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="<%=path%>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+        <script type="text/javascript" src="<%=path %>/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
 
         <script type="text/javascript">
             $(function() {

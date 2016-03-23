@@ -73,22 +73,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <a href="adminindex"><i class="glyphicon glyphicon-chevron-right"></i> 使用帮助文档</a>
                         </li>
                         <li>
-                            <a href="adminshowcase.html"><i class="glyphicon glyphicon-chevron-right"></i>案例首页展示</a>
+                            <a href="adminshowcase"><i class="glyphicon glyphicon-chevron-right"></i>案例首页展示</a>
                         </li>
 	          <li >
-                            <a href="adminaddcaseclass.html"><i class="glyphicon glyphicon-chevron-right"></i> 添加案例分类</a>
+                            <a href="adminaddcaseclass"><i class="glyphicon glyphicon-chevron-right"></i> 添加案例分类</a>
                         </li>
                         <li >
-                            <a href="admineditcaseclass.html"><i class="glyphicon glyphicon-chevron-right"></i>管理案例分类</a>
+                            <a href="admineditcaseclass"><i class="glyphicon glyphicon-chevron-right"></i>管理案例分类</a>
                         </li>                       
                         <li>
                             <a href="adminadduser"><i class="glyphicon glyphicon-chevron-right"></i>添加普通用户</a>
                         </li>
                         <li>
-                            <a href="adminedituser.html"><i class="glyphicon glyphicon-chevron-right"></i>管理普通用户</a>
+                            <a href="adminedituser"><i class="glyphicon glyphicon-chevron-right"></i>管理普通用户</a>
                         </li>
                         <li>
-                            <a href="adminselectlogs.html"><i class="glyphicon glyphicon-chevron-right"></i>查询操作记录</a>
+                            <a href="adminselectlogs"><i class="glyphicon glyphicon-chevron-right"></i>查询操作记录</a>
                         </li>                        
                     </ul>
                 </div>
