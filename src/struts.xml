@@ -88,6 +88,11 @@
 		<interceptor-ref name="ajaxsession"></interceptor-ref>
 	</action>
 	
+	<!-- adminaddcaseclass  -->
+	<action name="adminaddcaseclass">
+		<result name="success">/WEB-INF/jsp/adminaddcaseclass.jsp</result>
+	</action>
+	
 	<!-- session过期页面 -->
 	<action name="sessionout" >
 		<result>/WEB-INF/jsp/sessionout.jsp</result>
