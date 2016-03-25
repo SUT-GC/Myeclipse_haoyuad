@@ -56,4 +56,7 @@
 	
 	<!-- 创建新的Admin -->
 	<bean id="newAdmin" class="empty.Admin" scope="prototype"></bean>
+	
+	<!-- 创建新的Case -->
+	<bean id="newLabel" class="empty.Label" scope="prototype"></bean>
 </beans>

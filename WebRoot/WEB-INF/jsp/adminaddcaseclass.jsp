@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -45,7 +46,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  <span class="icon-bar"></span>
 			  <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="adminindex.html">浩宇广告公司后台</a>
+			<a class="navbar-brand" href="adminindex">浩宇广告公司后台</a>
 		  </div>
 		  <!-- Collect the nav links, forms, and other content for toggling -->
 		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员：<b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员：<s:property value="#session.username"/><b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				  <li><a href="#">账户中心</a></li>
                                                           <li class="divider"></li>
@@ -75,22 +76,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="col-md-2 bootstrap-admin-col-left">
                      <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
                          <li >
-                            <a href="adminindex.html"><i class="glyphicon glyphicon-chevron-right"></i> 使用帮助文档</a>
+                            <a href="adminindex"><i class="glyphicon glyphicon-chevron-right"></i> 使用帮助文档</a>
                         </li>
                         <li >
-                            <a href="adminshowcase.html"><i class="glyphicon glyphicon-chevron-right"></i>案例首页展示</a>
+                            <a href="adminshowcase"><i class="glyphicon glyphicon-chevron-right"></i>案例首页展示</a>
                         </li>
 	          <li class="active">
-                            <a href="adminaddcaseclass.html"><i class="glyphicon glyphicon-chevron-right"></i> 添加案例分类</a>
+                            <a href="adminaddcaseclass"><i class="glyphicon glyphicon-chevron-right"></i> 添加案例分类</a>
                         </li>
                         <li >
-                            <a href="admineditcaseclass.html"><i class="glyphicon glyphicon-chevron-right"></i>管理案例分类</a>
+                            <a href="admineditcaseclass"><i class="glyphicon glyphicon-chevron-right"></i>管理案例分类</a>
                         </li>                       
                         <li>
-                            <a href="adminadduser.html"><i class="glyphicon glyphicon-chevron-right"></i>添加普通用户</a>
+                            <a href="adminadduser"><i class="glyphicon glyphicon-chevron-right"></i>添加普通用户</a>
                         </li>
                         <li>
-                            <a href="adminedituser.html"><i class="glyphicon glyphicon-chevron-right"></i>管理普通用户</a>
+                            <a href="adminedituser"><i class="glyphicon glyphicon-chevron-right"></i>管理普通用户</a>
                         </li>
                         <li>
                             <a href="adminselectlogs.html"><i class="glyphicon glyphicon-chevron-right"></i>查询操作记录</a>
@@ -110,7 +111,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <div class="addcaseclass_all">
                                     <div for="inputEmail3" class="col-sm-3 input_classname control-label">请输入分类名称：</div>
                                     <div class="col-sm-9">
-                                      <input class="form-control" placeholder="请输入分类名，其中不能包含空格或非法字符">
+                                      <input class="form-control input_labelname" placeholder="请输入分类名，其中不能包含空格或非法字符">
                                     </div>
                                     <button type="button" class="btn button_addcaseclass btn-success">确认添加</button>
                                 </div>
@@ -133,6 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="<%=path %>/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<%=path %>/js/addlabel.js"></script>
         <script type="text/javascript" src="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
 
         <script type="text/javascript">
