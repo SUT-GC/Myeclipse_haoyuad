@@ -47,4 +47,25 @@ public class LabelDao {
 		
 		return result;
 	}
+	
+	
+	/**
+	 * 在label中查询处所有的label
+	 * @param 无
+	 * @return list
+	 */
+	public static List<Label> selectAllLabel(){
+		
+		List<Label> list = null;
+		
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		list = session.createQuery("from Label").list();
+		
+		transaction.commit();
+		session.close();
+		
+		return list;
+	}
 }

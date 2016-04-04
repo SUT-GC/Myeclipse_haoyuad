@@ -105,6 +105,16 @@
 		<result name="success">/WEB-INF/jsp/adminaddcaseclass.jsp</result>
 	</action>
 	
+	<!-- 标签管理页面 -->
+	<action name="admineditcaseclass" class="control.jspmap.AdminEditLabel">
+		<result name="success">/WEB-INF/jsp/admineditcaseclass.jsp</result>
+		<result name="sessionout">/WEB-INF/jsp/sessionout.jsp</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测session的拦截器 -->
+		<interceptor-ref name="adminsession"></interceptor-ref>
+	</action>
+	
 	<!-- ajax 添加标签 -->
 	<action name="addlabel" class="control.add.AddLabel">
 		<result name="success" type="stream">
