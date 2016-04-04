@@ -15,6 +15,7 @@ import empty.Label;
  * 对Label数据库进行操作
  * 1 向Label中添加
  * 2 在label中查询处所有的label
+ * 3: 根据labelid更新label
  */
 public class LabelDao {
 	private static  SessionFactory sessionFactory;
@@ -91,6 +92,31 @@ public class LabelDao {
 			session.flush();
 			result = 1;
 		}
+		transaction.commit();
+		session.close();
+		
+		return result;
+	}
+	
+	/**
+	 * 4 根据id删除label
+	 * @param int labelid
+	 * @return 1:删除成功  -1:labelid不存在  0:数据库失败
+	 */
+	public static int deleteLabelById(int labelid){
+		int result = 0;
+		
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Label label = (Label) session.get(Label.class, labelid);
+		if(label == null){
+			result = -1;
+		}else{
+			session.delete(label);
+			result = 1;
+		}
+		
 		transaction.commit();
 		session.close();
 		

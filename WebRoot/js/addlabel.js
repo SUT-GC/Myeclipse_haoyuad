@@ -22,6 +22,7 @@ $(document).ready(function(){
 					alert("您输入的分类名字已经存在");
 				}else if(data >= 0){
 					alert("添加成功");
+					location.href="admineditcaseclass";
 				}else {
 					$(".result").text(data);
 				}

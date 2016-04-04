@@ -52,4 +52,22 @@ $(document).ready(function(){
 		}
 	});
 	
+	//删除label 根据labelid
+	$(".button_delclass").click(function(){
+		var parent = $(this).parent().parent();
+		var oldlabelid = parent.find(".labelid").text();
+		$.post("deletelabel?labelid="+oldlabelid, function(data){
+			if(data == 1){
+				alert("删除成功");
+				parent.hide();
+			}else if(data == -4){
+				location.href="sessionout";
+			}else if(data == -1){
+				alert("没有该分类");
+			}else if(data == 0){
+				alert("数据库异常，请联系管理员");
+			}
+		});
+	});
+	
 });
