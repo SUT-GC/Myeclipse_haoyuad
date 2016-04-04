@@ -7,8 +7,11 @@ import empty.Label;
 
 public class TestLabelDao {
 	public static void main(String[] args) {
-		Label label = new Label();
-		label.setName(Base64.encodeBase64String("哈".getBytes()));
-		LabelDao.addLabel(label);
+//		Label label = new Label();
+//		label.setName(Base64.encodeBase64String("哈".getBytes()));
+//		LabelDao.addLabel(label);
+		
+		//测试更新label
+//		System.out.println(LabelDao.updateLabelById(14, Base64.encodeBase64String("哈哈".getBytes())));
 	}
 }

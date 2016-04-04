@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                       </thead>
                                       <tbody>
                                       	<s:iterator value="list" status="st">
-                                        	<tr><td><s:property value="#st.index+1"/></td><td><s:property value="name"/> </td><td ><button type="button" class="btn button_editclass btn-primary">编辑</button></td><td><button type="button" class="btn button_delclass btn-danger">删除</button> </td></tr>
+                                        	<tr><td class="labelid" style="display: none"> <s:property value="id"/> </td><td><s:property value="#st.index+1"/></td><td class="labelname"><s:property value="name"/> </td><td ><button type="button" class="btn button_editclass btn-primary">编辑</button></td><td><button type="button" class="btn button_delclass btn-danger">删除</button> </td></tr>
                                         </s:iterator>
                                       </tbody>
                                     </table>
@@ -131,14 +131,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <div class="text-muted bootstrap-admin-box-title"><a href = "#" class="rollback">管理案例分类 </a>/ <a>编辑 </a> / <a> 校园文化 </a></div>
                             </div>
                             <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
+                            	<div style="font-size:25px; color:red">您正在修改分类名为 : <a class="old_label_name"></a><span style="display:none" class="old_label_id"></span></div>
                                 <div class="editonecase_all">
-                                    <div for="inputEmail3" class="col-sm-3 input_classname control-label">请输入新的分类名：</div>
+                                    <div for="inputEmail3" class=" col-sm-3 input_classname control-label">请输入新的分类名：</div>
                                     <div class="col-sm-9">
-                                      <input class="form-control" placeholder="请输入分类名，其中不能包含空格或非法字符">
+                                      <input class="form-control new_label_name" placeholder="请输入分类名，其中不能包含空格或非法字符">
                                     </div>
                                     <button type="button" class="btn button_editcaseclassok btn-success">确认修改</button>
                                     <button type="button" class="btn button_editcaseclassno btn-primary">放弃修改</button>
                                 </div>
+                                <div class="result" style="font-size:20px; color:red; margin-top:20px;"></div>
                             </div>
                         </div>
                     </div>

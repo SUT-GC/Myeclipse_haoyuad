@@ -127,6 +127,18 @@
 		<interceptor-ref name="ajaxsession"></interceptor-ref>
 	</action>
 	
+	<!-- ajax 修改标签 -->
+	<action name="updatelabel" class="control.update.UpdateLabel">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
 	<!-- session过期页面 -->
 	<action name="sessionout" >
 		<result>/WEB-INF/jsp/sessionout.jsp</result>
