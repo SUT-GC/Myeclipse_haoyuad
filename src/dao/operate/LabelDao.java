@@ -34,8 +34,7 @@ public class LabelDao {
 		
 		List<Label> list = null;
 		
-		list = session.createQuery("select label from Label label where label.name ="+newLabel.getName()).list();
-		System.out.println(list.size());
+		list = session.createQuery("select label from Label label where label.name = '"+newLabel.getName()+"'").list();
 		
 		if(list.size() > 0){
 			result = -4;

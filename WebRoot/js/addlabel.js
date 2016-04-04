@@ -23,7 +23,7 @@ $(document).ready(function(){
 				}else if(data >= 0){
 					alert("添加成功");
 				}else {
-					alert(data);
+					$(".result").text(data);
 				}
 			});
 		}

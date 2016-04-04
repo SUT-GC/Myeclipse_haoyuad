@@ -108,7 +108,7 @@
 	<!-- ajax 添加标签 -->
 	<action name="addlabel" class="control.add.AddLabel">
 		<result name="success" type="stream">
-			<param name="inputType"></param>
+			<param name="inputType">text/html</param>
 			<param name="inputName">inputStream</param>
 		</result>
 		<!-- 配置系统默认拦截器 -->

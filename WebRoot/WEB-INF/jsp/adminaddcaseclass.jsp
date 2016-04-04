@@ -115,6 +115,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     </div>
                                     <button type="button" class="btn button_addcaseclass btn-success">确认添加</button>
                                 </div>
+                                <div class="result" style="font-size:20px; color:red"></div>
                             </div>
                         </div>
                     </div>
