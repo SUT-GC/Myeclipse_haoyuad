@@ -61,6 +61,9 @@ public class AddLabel extends ActionSupport {
 				//这一步是因为web前端传过来的数据是8859_1(西欧语言)的编码
 				newLabel.setName(Base64.encodeBase64String(labelname.getBytes("utf-8")));
 
+				//默认该分类不显示
+				newLabel.setShow(0);
+				
 				//int result -1数据库操作失败， -4:数据库中存在该case的名称 ,>0:存储成功
 				result = LabelDao.addLabel(newLabel);
 

@@ -108,7 +108,17 @@
 	<!-- 标签管理页面 -->
 	<action name="admineditcaseclass" class="control.jspmap.AdminEditLabel">
 		<result name="success">/WEB-INF/jsp/admineditcaseclass.jsp</result>
-		<result name="sessionout">/WEB-INF/jsp/sessionout.jsp</result>
+		<result name="sessionout">/WEB-INF/jsp/backlogin.jsp</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测session的拦截器 -->
+		<interceptor-ref name="adminsession"></interceptor-ref>
+	</action>
+	
+	<!-- 首页案例显示页面 -->
+	<action name="adminshowcase" class="control.jspmap.AdminShowCase">
+		<result name="success">/WEB-INF/jsp/adminshowcase.jsp</result>
+		<result name="sessionout">/WEB-INF/jsp/backlogin.jsp</result>
 		<!-- 配置系统默认拦截器 -->
 		<interceptor-ref name="defaultStack"></interceptor-ref>
 		<!-- 配置检测session的拦截器 -->

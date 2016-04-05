@@ -17,11 +17,14 @@ import javax.persistence.Table;
 public class Label {
 	@Id
 	@Column(name = "label_id")
-	@GeneratedValue( strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@Column(name = "label_name")
 	private String name;
+
+	@Column(name = "label_show")
+	private int show;
 
 	@ManyToMany(targetEntity = Case.class)
 	@JoinTable(name = "hyad_label_case", joinColumns = @JoinColumn(name = "label_id", referencedColumnName = "label_id"), inverseJoinColumns = @JoinColumn(name = "case_id", referencedColumnName = "case_id"))
@@ -54,9 +57,17 @@ public class Label {
 		this.cases = cases;
 	}
 
+	public int getShow() {
+		return show;
+	}
+
+	public void setShow(int show) {
+		this.show = show;
+	}
+
 	@Override
 	public String toString() {
-		return "Label [id=" + id + ", name=" + name + "]";
+		return "Label [id=" + id + ", name=" + name + ", show=" + show + "]";
 	}
 
 }

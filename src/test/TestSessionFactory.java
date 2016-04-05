@@ -32,7 +32,6 @@ public class TestSessionFactory {
 		case1.setDescribe("hello2");
 		case1.setHeadimg("hello2");
 		case1.setImages("hello3");
-		case1.setShow(1);
 		
 		Set<Case> set = new HashSet<Case>();
 		set.add(case1);

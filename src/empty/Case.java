@@ -30,8 +30,6 @@ public class Case {
 	private String images;
 	@Column(name="case_createtime")
 	private Timestamp timestamp;
-	@Column(name="case_show")
-	private int show;
 	
 	@ManyToMany(targetEntity=Label.class)
 	@JoinTable(name="hyad_label_case", joinColumns=@JoinColumn(name="case_id", referencedColumnName="case_id"), inverseJoinColumns=@JoinColumn(name="label_id", referencedColumnName="label_id"))
@@ -88,14 +86,6 @@ public class Case {
 		this.timestamp = timestamp;
 	}
 
-	public int getShow() {
-		return show;
-	}
-
-	public void setShow(int show) {
-		this.show = show;
-	}
-
 	public Set<Label> getLabels() {
 		return labels;
 	}
@@ -108,7 +98,7 @@ public class Case {
 	public String toString() {
 		return "Case [id=" + id + ", name=" + name + ", describe=" + describe
 				+ ", headimg=" + headimg + ", images=" + images
-				+ ", timestamp=" + timestamp + ", show=" + show + "]";
+				+ ", timestamp=" + timestamp + "]";
 	}
 	
 
