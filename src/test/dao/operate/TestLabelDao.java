@@ -13,5 +13,6 @@ public class TestLabelDao {
 		
 		//测试更新label
 //		System.out.println(LabelDao.updateLabelById(14, Base64.encodeBase64String("哈哈".getBytes())));
+		System.out.println(LabelDao.updataCaseShow(3, 0));
 	}
 }

@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员：<s:property value="#session.name"/> <b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员：<s:property value="#session.username"/> <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				  <li><a href="#">账户中心</a></li>
                                                           <li class="divider"></li>
@@ -114,7 +114,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                       </thead>
                                       <tbody>
                                       	<s:iterator value="list" status="st">
-                                        	<tr><td class="labelid" style="display:none"><s:property value="id"/></td><td><s:property value="#st.index+1"/></td><td class="labelname" ><s:property value="name"/> </td><td><s:property value="show"/>  <s:if test="show"><label class="checkisshow"><input type="checkbox"  checked:true></label></s:if> <s:else><label class="checkisshow"><input type="checkbox"></label></s:else> </td></tr>
+                                        	<tr><td class="labelid" style="display:none"><s:property value="id"/></td><td><s:property value="#st.index+1"/></td><td class="labelname" ><s:property value="name"/> </td><td> <s:if test="show"><label ><input class="checkisshow" type="checkbox"  checked></label></s:if> <s:else><label ><input class="checkisshow" type="checkbox"></label></s:else> </td></tr>
                                         </s:iterator>
                                       </tbody>
                                     </table>
@@ -139,7 +139,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="<%= path%>/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<%= path%>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
-
+		<script type="text/javascript" src="<%=path %>/js/adminshowcase.js"></script>
         <script type="text/javascript">
             $(function() {
                 // Easy pie charts

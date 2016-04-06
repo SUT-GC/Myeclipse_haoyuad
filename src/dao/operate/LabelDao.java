@@ -122,4 +122,43 @@ public class LabelDao {
 		
 		return result;
 	}
+	
+	/**
+	 * 5 :根据labelid与show更新show字段
+	 * @param int labelid, int show
+	 * @return int result
+	 * 0:数据库操作出现问题，1:操作成功 , -1:最多不能超过三个展示案例
+	 */
+	public static int updataCaseShow(int labelid, int show){
+		
+		int result = 0;
+		
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		List list =  session.createQuery("from Label label where label.show = 1").list();
+		
+		if(show == 1){
+			if(list.size() > 2){
+				result = -1;
+			}else{
+				Label label = (Label) session.get(Label.class, labelid);
+				label.setShow(show);
+				session.flush();
+				result = 1;
+			}
+		}else{
+			Label label = (Label) session.get(Label.class, labelid);
+			label.setShow(show);
+			session.flush();
+			result = 1;
+		}
+
+		
+		transaction.commit();
+		session.close();
+		
+		return result;
+	}
 }
+

@@ -161,7 +161,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="<%=path %>/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<%=path %>/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
-
+		
         <script type="text/javascript">
             $(function() {
                 // Easy pie charts
