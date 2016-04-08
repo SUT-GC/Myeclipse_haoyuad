@@ -117,7 +117,7 @@ public class CheckUser extends ActionSupport {
 					
 				}else{
 					//不是，result= 8
-					AddLog.addOperateLog(new String(Base64.decodeBase64(admin.getName().getBytes("utf-8"))), admin.getAccount(), "登陆后台，登陆成功", ip, ipaddress, new Date());
+					AddLog.addOperateLog(new String(Base64.decodeBase64(admin.getName().getBytes("utf-8"))), admin.getAccount(), "登陆后台，登陆成功", ip, ipaddress, ApplicationContextUtil.getApplicationContext().getBean("date",Date.class));
 					result ="8";
 					
 				}
