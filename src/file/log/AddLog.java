@@ -11,7 +11,7 @@ import java.util.Date;
 import util.DateFormatUtil;
 
 public class AddLog {
-	public static void addOperateLog(String username, String useraccount, String useroperate, Date date){
+	public static void addOperateLog(String username, String useraccount, String useroperate, String userip, String useraddress , Date date){
 		
 		String filename;
 		boolean createok = true;
@@ -40,7 +40,13 @@ public class AddLog {
 				PrintStream printStream = new PrintStream(fileOutputStream);
 				
 				//包装流进行写入
-				printStream.println("操作者: "+username+", 操作账号 : "+useraccount+", 操作是 : "+useroperate+", 操作时间 : "+DateFormatUtil.dateFormatToyyyyMMddHHmmss(date));
+				printStream.println("===================操作开始====================="
+						+ "\n操作时间："+DateFormatUtil.dateFormatToyyyyMMddHHmmss(date)
+						+"\n操作者："+username+"\n操作账号："+useraccount
+						+"\n操作 ip："+userip+"\n操作地址："+useraddress+"  "
+						+"\n所进行的操作："+useroperate
+						+"\n===================操作结束====================="
+						);
 				
 				//关闭流
 				printStream.close();

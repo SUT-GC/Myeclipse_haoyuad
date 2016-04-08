@@ -22,6 +22,7 @@ import dao.operate.AdminDao;
 import dao.operate.AdminLoginInforDao;
 import empty.Admin;
 import empty.AdminLoginInfo;
+import file.log.AddLog;
 
 public class CheckUser extends ActionSupport {
 	private String useraccount;
@@ -116,7 +117,9 @@ public class CheckUser extends ActionSupport {
 					
 				}else{
 					//不是，result= 8
+					AddLog.addOperateLog(new String(Base64.decodeBase64(admin.getName().getBytes("utf-8"))), admin.getAccount(), "登陆后台，登陆成功", ip, ipaddress, new Date());
 					result ="8";
+					
 				}
 			}else{
 				//密码错误

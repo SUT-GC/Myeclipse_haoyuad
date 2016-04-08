@@ -187,5 +187,11 @@
 		<!-- 配置检测session的拦截器 -->
 		<interceptor-ref name="adminsession"></interceptor-ref>
 	</action>
+	
+	<!-- 普通用户使用界面 -->
+	<!-- 普通用户index界面 -->
+	<action name="normalindex" class="control.jspmap.NormalIndex">
+		<result name="success">/WEB-INF/jsp/backindex.jsp</result>
+	</action>
 </package>
 </struts>    

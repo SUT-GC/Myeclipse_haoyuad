@@ -6,11 +6,14 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import file.log.AddLog;
+
 public class OutLogin extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		//获取session
 		HttpSession httpSession = ServletActionContext.getRequest().getSession();
+		
 		//注销session
 		httpSession.removeAttribute("userid");
 		httpSession.removeAttribute("username");

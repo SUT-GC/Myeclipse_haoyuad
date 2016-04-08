@@ -33,9 +33,9 @@ $(document).ready(function(){
 		if(result == 1){
 			$.post("checkuser?useraccount="+useraccount+"&userpass="+userpass, function(data){
 				if(data == 1){
-					window.location.href="adminindex"
+					window.location.href="adminindex";
 				}else if(data == 8){
-					alert("普通管理员");
+					window.location.href="normalindex";
 				}else{
 					$(".result").text(errmessage[data]);
 				}

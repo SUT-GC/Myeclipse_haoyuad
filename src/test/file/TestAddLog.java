@@ -6,6 +6,6 @@ import file.log.AddLog;
 
 public class TestAddLog {
 	public static void main(String[] args) {
-		AddLog.addOperateLog("勾超", "18804036473", "删除案例", new Date());
+		AddLog.addOperateLog("gc", "18804036473", "删除用户", "192.168.1.1", "沈阳", new Date());
 	}
 }
