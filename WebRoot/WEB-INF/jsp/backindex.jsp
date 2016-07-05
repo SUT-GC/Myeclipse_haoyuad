@@ -72,10 +72,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <a href="normalindex"><i class="glyphicon glyphicon-chevron-right"></i> 使用帮助文档</a>
                         </li>
 						<li >
-                            <a href="backaddcase.html"><i class="glyphicon glyphicon-chevron-right"></i> 添加项目案例</a>
+                            <a href="backaddcase"><i class="glyphicon glyphicon-chevron-right"></i> 添加项目案例</a>
                         </li>                       
                         <li>
-                            <a href="backeditcase.html"><i class="glyphicon glyphicon-chevron-right"></i> 修改项目案例</a>
+                            <a href="backeditcase"><i class="glyphicon glyphicon-chevron-right"></i> 修改项目案例</a>
                         </li>
                     </ul>
                 </div>

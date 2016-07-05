@@ -47,5 +47,8 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/gcutil.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/gson-2.7.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/okhttp-3.4.0-RC1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/qiniu-java-sdk-7.1.1.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

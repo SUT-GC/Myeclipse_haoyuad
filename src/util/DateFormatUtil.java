@@ -29,10 +29,10 @@ public class DateFormatUtil {
 	 * @throws UnsupportedEncodingException 
 	 */
 	public static String dateFormatToyyyyMMdd(Date date) throws UnsupportedEncodingException{
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
 		String formart = simpleDateFormat.format(date);
-		String result = Base64.encodeBase64String(formart.getBytes("utf-8"));
-		return result;
+//		String result = Base64.encodeBase64String(formart.getBytes("utf-8"));
+		return formart;
 	}
 	
 }

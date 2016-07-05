@@ -11,6 +11,8 @@ import java.util.Date;
 import util.DateFormatUtil;
 
 public class AddLog {
+	public static String FILEPATH ="/home/gc/hyad_log/";
+	
 	public static void addOperateLog(String username, String useraccount, String useroperate, String userip, String useraddress , Date date){
 		
 		String filename;
@@ -21,7 +23,7 @@ public class AddLog {
 			System.out.println("文件的名字为 : "+filename);
 			
 			//以文件的名字和linux目录 /home/gc/hyad_log/filename.txt进行创建
-			File file = new File("/home/gc/hyad_log/"+filename+".txt");
+			File file = new File(FILEPATH+filename+".txt");
 			//输出文件的绝对路径
 			System.out.println("文件的绝对路径"+file.getPath());
 			
