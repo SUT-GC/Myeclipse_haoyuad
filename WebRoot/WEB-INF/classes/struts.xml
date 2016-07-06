@@ -265,5 +265,16 @@
 		<interceptor-ref name="ajaxsession"></interceptor-ref>
 	</action>
 	
+	<!-- Ajax 更新case info -->
+	<action name="updatecaseinfo" class="control.update.UpdateCaseInfo">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
 </package>
 </struts>    

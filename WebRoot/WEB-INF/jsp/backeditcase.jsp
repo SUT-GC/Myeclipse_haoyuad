@@ -105,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   </thead>
                                   <tbody>
                                   	<s:iterator value="list" status="st">
-                                  		<tr><td class="case_id"  style="display:none;"><s:property value="id"/> </td><td><s:property value="#st.index+1"/> </td><td><s:property value="name"/> </td><td><s:property value="timestamp"/> </td><td><button class="edit_caseinfor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></td><td><button class="del_img"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td><td><button class="upload_img"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button></td><td><button class="del_case"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>
+                                  		<tr><td class="case_id"  style="display:none;"><s:property value="id"/></td><td class="case_describe"  style="display:none;"><s:property value="describe"/> </td><td><s:property value="#st.index+1"/></td><td class="case_name"><s:property value="name"/></td><td><s:property value="timestamp"/> </td><td><button class="edit_caseinfor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></td><td><button class="del_img"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td><td><button class="upload_img"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button></td><td><button class="del_case"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>
                                   	</s:iterator>
                                   </tbody>
                                 </table>
@@ -123,7 +123,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目名称：</span>
                                         </div>
                                         <div class="editcase_head_right col-md-10">
-                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="必须添加项目名称，内容中不能存在空格">
+                                            <input   type="text" class="form-control new_case_name" id="exampleInputName2" placeholder="必须添加项目名称，内容中不能存在空格">
+                                            <div class="new_case_id" style="display:none;"></div>
                                         </div>
                                     </div>
                                     <hr/>
@@ -132,7 +133,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目描述：</span>
                                         </div>
                                         <div class="editcase_head_right col-md-10">
-                                            <textarea class="form-control" rows="3" placeholder="项目描述可以选填，显示在项目展示处"></textarea>
+                                            <textarea  class="form-control new_case_describe" rows="3" placeholder="项目描述可以选填，显示在项目展示处"></textarea>
                                         </div>
                                     </div>
                                     <hr/>
@@ -141,15 +142,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目分类：</span>
                                         </div>
                                         <div class="editcase_head_right  case_class col-md-10">
-                                            <label class="radio-inline">
-                                              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 校园文化
-                                            </label>
-                                            <label class="radio-inline">
-                                              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 公司文化
-                                            </label>
-                                            <label class="radio-inline">
-                                              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 企业文化
-                                            </label>
+                                        	<s:iterator value="labels">
+                                        		<label class="radio-inline">
+                                              		<input type="radio" class="case_class_check"  name="inlineRadioOptions" id="inlineRadio1" value='<s:property value="id"/>'><s:property value="name"/>
+                                           		 </label>
+                                        	</s:iterator>
                                         </div>
                                     </div>
                                     <hr/>
