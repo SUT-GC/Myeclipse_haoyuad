@@ -93,17 +93,18 @@ $(document).ready(function(){
 			        'FilesAdded': function(up, files) {
 			            plupload.each(files, function(file) {
 			                // 文件添加进队列后，处理相关的事情
+			            	$(".start_upload").text("正在准备上传......");
 			            });
 			        },
 			        'BeforeUpload': function(up, file) {
-			        	alert("开始上传文件");
+			        	$(".start_upload").text("正在上传中......");
 			               // 每个文件上传前，处理相关的事情
 			        },
 			        'UploadProgress': function(up, file) {
 			               // 每个文件上传时，处理相关的事情
 			        },
 			        'FileUploaded': function(up, file, info) {
-			        	alert("上传完成");
+			        	$(".start_upload").text("上传完成");
 			        	var imgBackName = eval("("+info+")");
 			        	$(".select_body_img_a2").after(newBodyImgDiv);
 			        	var nextDiv = $(".select_body_img_a2").next();
@@ -162,8 +163,44 @@ $(document).ready(function(){
 		bodyImgNames = sumBodyImageName();
 	});
 	
+	
+	//单选按钮获取内容
+	var input_case_check = "";
+	$(".case_class_check").change(function(){
+		input_case_check = $(this).val();
+	});
 	//提交按钮
 	$(".addcase_sub_button").click(function(){
-		alert(headImgName+"\n"+bodyImgNames+"\n");
+		var input_case_name = $(".input_case_name").val();
+		var input_case_describe = $(".input_case_describe").val();
+		var exp_space = /(^\s+)|(\s+$)/;
+//		alert(exp_space.test(input_case_name));
+		if(input_case_name == "" || input_case_name.lenght == 0 || exp_space.test(input_case_name)){
+			alert("项目名称必须输入并且输入内容不能以空格开头，空格结尾");
+		}else if(input_case_check == ""){
+			alert("请选择一个项目分类");
+		}else if(headImgName == null){
+			alert("必须上传项目首图");
+		}else if(bodyImgNames == null || bodyImgNames.length == 0){
+			alert("请上传项目分图")
+		}else{
+			var imgNames = "";
+			for(var i=0; i < bodyImgNames.length; i++){
+				imgNames += bodyImgNames[i];
+				imgNames += ";";
+			}
+			alert("正在添加，添加的ajax为: \n addcase?caseName="+input_case_name+"&caseDescribe="+input_case_describe+"&labelId="+input_case_check+"&imageHeadName="+headImgName+"&imageBodyNames="+imgNames)
+			$.post("addcase?caseName="+input_case_name+"&caseDescribe="+input_case_describe+"&labelId="+input_case_check+"&imageHeadName="+headImgName+"&imageBodyNames="+imgNames, function(data){
+				if(data >= 1){
+					alert("添加成功");
+					window.location.href="backeditcase";
+				}else if(data == -2){
+					window.location.href="sessionout";
+				}else if(data == 0){
+					alert("添加失败");
+				}
+			});
+		}
+//		alert(headImgName+"\n"+bodyImgNames+"\n"+"---"+input_case_name+"---"+"\n"+input_case_describe+"\n"+input_case_check);
 	});
 });

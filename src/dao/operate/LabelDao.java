@@ -160,5 +160,24 @@ public class LabelDao {
 		
 		return result;
 	}
+	
+	/**
+	 * 6:根据Label id查询Labl
+	 * @param int labelid
+	 * @return Label label
+	 */
+	public static Label selectLabelById(int labelid){
+		Label label = null;
+		
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		label = (Label) session.get(Label.class, labelid);
+		
+		transaction.commit();
+		session.close();
+		
+		return label;
+	}
 }
 

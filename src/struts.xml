@@ -220,6 +220,18 @@
 		<interceptor-ref name="ajaxsession"></interceptor-ref>
 	</action>
 	
+	<!-- 添加Case  ajax -->
+	<action name="addcase" class="control.add.AddCase">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
 	<!-- 普通用户使用界面 -->
 	<!-- 普通用户index界面 -->
 	<action name="normalindex" class="control.jspmap.NormalIndex">
@@ -230,5 +242,28 @@
 		<!-- 配置检查session的拦截器 -->
 		<interceptor-ref name="adminsession"></interceptor-ref>
 	</action>
+	
+	<!-- 编辑案例界面 -->
+	<action name="backeditcase" class="control.jspmap.BackEditCase">
+		<result>/WEB-INF/jsp/backeditcase.jsp</result>
+		<result name="sessionout">/WEB-INF/jsp/backlogin.jsp</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检查session的拦截器 -->
+		<interceptor-ref name="adminsession"></interceptor-ref>
+	</action>
+	
+	<!-- Ajax 删除项目 -->
+	<action name="deletecase" class="control.delete.DeleteCase">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
+	
 </package>
 </struts>    

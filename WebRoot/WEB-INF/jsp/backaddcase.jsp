@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目名称：</span>
                                         </div>
                                         <div class="addcase_head_right col-md-10">
-                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="必须添加项目名称，内容中不能存在空格">
+                                            <input type="text" class="form-control input_case_name" id="exampleInputName2" placeholder="必须添加项目名称，内容中不能存在空格">
                                         </div>
                                     </div>
                                     <hr/>
@@ -111,7 +111,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目描述：</span>
                                         </div>
                                         <div class="addcase_head_right col-md-10">
-                                            <textarea class="form-control" rows="3" placeholder="项目描述可以选填，显示在项目展示处"></textarea>
+                                            <textarea class="form-control input_case_describe" rows="3" placeholder="项目描述可以选填，显示在项目展示处"></textarea>
                                         </div>
                                     </div>
                                     <hr/>
@@ -120,15 +120,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目分类：</span>
                                         </div>
                                         <div class="addcase_head_right  case_class col-md-10">
-                                            <label class="radio-inline">
-                                              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 校园文化
-                                            </label>
-                                            <label class="radio-inline">
-                                              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 公司文化
-                                            </label>
-                                            <label class="radio-inline">
-                                              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 企业文化
-                                            </label>
+                                        	<s:iterator value="list" status="st">
+                                        		<label class="radio-inline">
+                                              		<input type="radio" class="case_class_check" name="inlineRadioOptions" id="inlineRadio1" value='<s:property value="id"/>'><s:property value="name"/>
+                                            	</label>
+                                        	</s:iterator>
                                         </div>
                                     </div>
                                     <hr/>
@@ -152,6 +148,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <span>项目分图</span>
                                         </div>
                                         <div class="addcase_head_right  addcase_body_right col-md-10">
+                                        	<span class="start_upload"></span><br/>
                                         	<a class="select_body_img_a2" id="select_body_img_a2" style="float:left;" accept="image/*"  >选择图片</a>
                                           
                                            <div class="clear" style="clear:both"></div>

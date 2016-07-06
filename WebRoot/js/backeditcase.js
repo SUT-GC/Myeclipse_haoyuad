@@ -40,4 +40,25 @@ $(document).ready(function(){
 		$(this).parent().prepend('<div class="show_imgnames" style="font-size:18px; margin-bottom:20px"> 图片名依次为：'+imgnames+'</div>');
 	});
 
+	$(".del_case").click(function(){
+		if(!confirm("您确定要删除该项目么？")){
+			return;
+		}
+		var parentTr = $(this).parent().parent();
+		var caseid = parentTr.find(".case_id").text();
+		if(caseid >= 0 && caseid<= 10000000){
+			$.post("deletecase?caseid="+caseid, function(data){
+				if(data == 1){
+					alert("删除成功");
+					parentTr.hide();
+				}else if(data == -4){
+					window.location.href="sessionout";
+				}else{
+					alert("出现异常");
+				}
+			});
+		}else{
+			alert("caseid不是数字或者超出范围");
+		}
+	});
 });
