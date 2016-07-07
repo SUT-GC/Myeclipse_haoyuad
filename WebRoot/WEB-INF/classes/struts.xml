@@ -276,5 +276,17 @@
 		<!-- 配置检测ajax session过期的拦截器 -->
 		<interceptor-ref name="ajaxsession"></interceptor-ref>
 	</action>
+	
+	<!-- Ajax 删除图片 -->
+	<action name="delcasebodyimg" class="control.update.UpdateCaseImageNames">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+		<!-- 配置系统默认拦截器 -->
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<!-- 配置检测ajax session过期的拦截器 -->
+		<interceptor-ref name="ajaxsession"></interceptor-ref>
+	</action>
 </package>
 </struts>    

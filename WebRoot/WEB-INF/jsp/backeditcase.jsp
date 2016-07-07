@@ -105,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   </thead>
                                   <tbody>
                                   	<s:iterator value="list" status="st">
-                                  		<tr><td class="case_id"  style="display:none;"><s:property value="id"/></td><td class="case_describe"  style="display:none;"><s:property value="describe"/> </td><td><s:property value="#st.index+1"/></td><td class="case_name"><s:property value="name"/></td><td><s:property value="timestamp"/> </td><td><button class="edit_caseinfor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></td><td><button class="del_img"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td><td><button class="upload_img"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button></td><td><button class="del_case"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>
+                                  		<tr><td class="case_id"  style="display:none;"><s:property value="id"/></td><td class="case_describe"  style="display:none;"><s:property value="describe"/> </td><td class="case_images"  style="display:none;"><s:property value="images"/></td><td><s:property value="#st.index+1"/></td><td class="case_name"><s:property value="name"/></td><td><s:property value="timestamp"/> </td><td><button class="edit_caseinfor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></td><td><button class="del_img"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td><td><button class="upload_img"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button></td><td><button class="del_case"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>
                                   	</s:iterator>
                                   </tbody>
                                 </table>
@@ -161,62 +161,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <div class="panel-heading">
                                <div class="text-muted bootstrap-admin-box-title"><a class="rollback_to_editcase" href="#">修改项目案例</a> &nbsp;&nbsp;/&nbsp;&nbsp;<a>向阳中学走廊设计</a>/&nbsp;&nbsp;<a>删除照片</a></div>
                             </div>
+                            <div class="delimg_case_id" style="display:none;"></div>
                             <div class="showimg_all">
+                            	
                               <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
+                              <!-- <div class="col-xs-6 col-md-3 each_img">
                                 <div class="thumbnail">
                                   <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
                                   <img src="images/1.png" alt="...">
                                 </div>
-                              </div>
-                              <!--显示单个img div  end-->
-                              <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
-                                <div class="thumbnail">
-                                  <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-                                  <img src="images/1.png" alt="...">
-                                </div>
-                              </div>
-                              <!--显示单个img div  end-->
-                              <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
-                                <div class="thumbnail">
-                                  <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-                                  <img src="images/1.png" alt="...">
-                                </div>
-                              </div>
-                              <!--显示单个img div  end-->
-                              <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
-                                <div class="thumbnail">
-                                  <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-                                  <img src="images/1.png" alt="...">
-                                </div>
-                              </div>
-                              <!--显示单个img div  end-->
-                              <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
-                                <div class="thumbnail">
-                                  <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-                                  <img src="images/1.png" alt="...">
-                                </div>
-                              </div>
-                              <!--显示单个img div  end-->
-                              <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
-                                <div class="thumbnail">
-                                  <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-                                  <img src="images/1.png" alt="...">
-                                </div>
-                              </div>
-                              <!--显示单个img div  end-->
-                              <!--显示单个img div  start-->
-                              <div class="col-xs-6 col-md-3 each_img">
-                                <div class="thumbnail">
-                                  <button class="glyphicon glyphicon-remove" aria-hidden="true"></button>
-                                  <img src="images/1.png" alt="...">
-                                </div>
-                              </div>
+                              </div> -->
                               <!--显示单个img div  end-->
                             </div>
                         </div>

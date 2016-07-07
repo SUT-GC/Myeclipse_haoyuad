@@ -108,4 +108,24 @@ public class CaseDao {
 		session.close();
 		return result;
 	}
+	
+	/**
+	 * 根据caseid，更新项目图片
+	 * @param String imageNames;
+	 * @return int 
+	 */
+	public static int updateCaseImageNames(int caseid, String imageNames){
+		int result = 0;
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Case acase = (Case) session.get(Case.class, caseid);
+		acase.setImages(imageNames);
+		
+		result = 1;
+		
+		transaction.commit();
+		session.close();
+		return result;
+	}
 }
