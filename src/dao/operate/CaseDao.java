@@ -110,7 +110,7 @@ public class CaseDao {
 	}
 	
 	/**
-	 * 根据caseid，更新项目图片
+	 * 6 根据caseid，更新项目图片
 	 * @param String imageNames;
 	 * @return int 
 	 */
@@ -123,6 +123,34 @@ public class CaseDao {
 		acase.setImages(imageNames);
 		
 		result = 1;
+		
+		transaction.commit();
+		session.close();
+		return result;
+	}
+	
+	/**
+	 * 7: 跟新HeadImg并且添加BodyImg
+	 * @param int caseid,String headimg, String bodyimg
+	 * @return int
+	 */
+	public static int uploadCaseImg(int caseid,String headimg, String bodyimg){
+		int result = 0;
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Case acase = (Case) session.get(Case.class, caseid);
+		try {
+			if(headimg != null){
+				acase.setHeadimg(headimg);
+			}
+			if(bodyimg != null){
+				acase.setImages(acase.getImages()+bodyimg);
+			}
+			result = 1;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		transaction.commit();
 		session.close();

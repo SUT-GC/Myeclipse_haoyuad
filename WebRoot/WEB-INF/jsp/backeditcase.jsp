@@ -185,6 +185,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             </div>
                             <div class="upload_img_div">
                               <div class="each_line row">
+                              		<div class="old_case_id" style="display:none"></div>
                                   <div class="addcase_head_left col-md-2">
                                       <span>项目首图：</span>
                                   </div>

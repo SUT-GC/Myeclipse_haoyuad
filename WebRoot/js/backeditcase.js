@@ -62,6 +62,11 @@ $(document).ready(function(){
 		$(".edit_caseinfor_div").hide();
 		$(".delimg_all").hide();
 		$(".upload_img_all").show();
+		
+		var parentTr = $(this).parent().parent();
+		var caseid = parentTr.find(".case_id").text();
+		$(".old_case_id").text(caseid);
+		
 		var spaceName = "http://7xrh7n.com1.z0.glb.clouddn.com";
 		var imageSrc = spaceName+"/";
 	
@@ -188,6 +193,7 @@ $(document).ready(function(){
 				        'UploadComplete': function() {
 				        	
 				        
+				        	
 				               //队列文件处理完毕后，处理相关的事情
 				        },
 				        'Key': function(up, file) {
@@ -224,8 +230,20 @@ $(document).ready(function(){
 				imgNames += ";";
 			}
 		}
+		
+		var caseid = $(".old_case_id").text();
+		alert(caseid+"\n"+headImg+"\n"+imgNames);
 	
-		alert(headImg+"\n"+imgNames);
+		$.post("uploadcaseimg?caseid="+caseid+"&HeadImg="+headImg+"&BodyImg="+imgNames, function(data){
+			if(data == 1){
+				alert("添加成功");
+				window.location.href="backeditcase";
+			}else if(data == -4){
+				window.location.href="sessionout";
+			}else{
+				alert("添加失败！请重新添加！");
+			}
+		})
 	});
 	$(".input_file").change(function(){
 		var input_imgs = document.getElementById("input_files");
