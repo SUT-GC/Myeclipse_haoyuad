@@ -299,7 +299,14 @@
 		<interceptor-ref name="defaultStack"></interceptor-ref>
 		<!-- 配置检测ajax session过期的拦截器 -->
 		<interceptor-ref name="ajaxsession"></interceptor-ref>
-		
 	</action>
+
+
+	<!-- 与主页相关的action -->
+	<!-- index 的action -->
+	<action name="index" class="control.jspmap.Index">
+		<result name="success">/WEB-INF/jsp/index.jsp</result>
+	</action>
+	
 </package>
 </struts>    

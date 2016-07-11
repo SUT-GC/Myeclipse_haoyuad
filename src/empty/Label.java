@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import org.springframework.context.annotation.Lazy;
 
 @Entity
 @Table(name = "hyad_label")
@@ -26,7 +29,7 @@ public class Label {
 	@Column(name = "label_show")
 	private int show;
 
-	@ManyToMany(targetEntity = Case.class)
+	@ManyToMany(targetEntity = Case.class, fetch=FetchType.EAGER)
 	@JoinTable(name = "hyad_label_case", joinColumns = @JoinColumn(name = "label_id", referencedColumnName = "label_id"), inverseJoinColumns = @JoinColumn(name = "case_id", referencedColumnName = "case_id"))
 	private Set<Case> cases;
 

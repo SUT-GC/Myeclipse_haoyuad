@@ -1,5 +1,6 @@
 package dao.operate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.codec.binary.Base64;
@@ -178,6 +179,21 @@ public class LabelDao {
 		session.close();
 		
 		return label;
+	}
+	
+	/**
+	 * 7：查询出所有show的label
+	 */
+	public static List<Label> selectAllShowLabels(){
+		List<Label> labelList = new ArrayList<Label>();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		labelList = session.createQuery("from Label label where label.show = 1").list();
+		
+		transaction.commit();
+		session.close();
+		return labelList;
 	}
 }
 
