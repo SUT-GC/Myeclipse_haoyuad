@@ -38,6 +38,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <link rel="stylesheet" type="text/css" href="css/backeditimg.css">
         <script type="text/javascript" src = "js/backeditcase.js"></script>
         <!--引入backeditcase.js .css end-->
+        <!-- 引入七牛上传js -->
+         <script type="text/javascript" src="js/qiniu.min.js"></script>
+        <script type="text/javascript" src="js/plupload.full.min.js"></script>
     </head>
     <body class="bootstrap-admin-with-small-navbar">
      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
@@ -186,7 +189,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                       <span>项目首图：</span>
                                   </div>
                                   <div class="addcase_head_right  col-md-10">
-                                     <input class="input_head_img" id="input_head_img" accept="image/*" type="file" id="exampleInputFile">
+                                 	 <span class="each_head_uploaddiv"></span>
+                                 	 
+                                 	 <img class="each_img_head" id="each_img_head"  style="width:200px; height:200px;"/>
+                                   	 <a id="select_head_img_a"  accept="image/*"  >选择图片</a>
                                   </div>
                                 </div>
                                 <hr/>
@@ -194,14 +200,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   <div class="addcase_head_left col-md-2">
                                       <span>项目分图</span>
                                   </div>
-                                  <div class="addcase_head_right  col-md-10">
-                                    <div class="each_img_fen">
-                                         <input class="input_file" id="input_files" multiple accept="image/*" type="file" id="exampleInputFile">
-                                     </div>
+                                  <div class="addcase_head_right  editcase_body_img col-md-10">
+                                		  <span class="start_upload"></span><br/>
+                                        	<a class="select_body_img_a2" id="select_body_img_a2" style="float:left; " accept="image/*"  >选择图片</a>
+                                          
+                                           <div class="clear" style="clear:both"></div>
                                   </div>
                                 </div>
                                 <div class="each_line">
-                                       <button type="button" class="btn btn-success editcase_sub_button">提交图片</button>
+                                       <button type="button"  id="editcaseimg_sub_button" class="btn btn-success" style="width:100%; ">提交图片</button>
                                 </div>
                             </div>
                         </div>
