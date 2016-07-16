@@ -32,6 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <![endif]-->
         <!--引入backaddcase.css-->
         <link href="css/backaddcase.css" rel="stylesheet" media="screen">
+        <script type="text/javascript" src="js/base64.js"></script>
         <script type="text/javascript" src="js/qiniu.min.js"></script>
         <script type="text/javascript" src="js/plupload.full.min.js"></script>
         <script type="text/javascript" src="js/addcase.js"></script>

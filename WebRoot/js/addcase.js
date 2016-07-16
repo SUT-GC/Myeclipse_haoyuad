@@ -190,7 +190,13 @@ $(document).ready(function(){
 				imgNames += ";";
 			}
 			alert("正在添加，添加的ajax为: \n addcase?caseName="+input_case_name+"&caseDescribe="+input_case_describe+"&labelId="+input_case_check+"&imageHeadName="+headImgName+"&imageBodyNames="+imgNames)
-			$.post("addcase?caseName="+input_case_name+"&caseDescribe="+input_case_describe+"&labelId="+input_case_check+"&imageHeadName="+headImgName+"&imageBodyNames="+imgNames, function(data){
+			$.post("addcase",{
+				caseName:Base64.encode(input_case_name),
+				caseDescribe:Base64.encode(input_case_describe),
+				labelId:input_case_check,
+				imageHeadName:headImgName,
+				imageBodyNames:imgNames
+			}, function(data){
 				if(data >= 1){
 					alert("添加成功");
 					window.location.href="backeditcase";

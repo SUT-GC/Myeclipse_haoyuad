@@ -48,14 +48,17 @@ public class Index extends ActionSupport {
 		System.out.println(labelList.size());
 		
 		labelsJSON = "[";
-		for(int i = 0; i< labelList.size()-1; i++){
-			labelsJSON += "{'labelName':'";
-			labelsJSON += labelList.get(i).getName();
-			labelsJSON += "'},";
+		if(labelList.size() >= 1){
+			for(int i = 0; i< labelList.size()-1; i++){
+				labelsJSON += "{'labelName':'";
+				labelsJSON += labelList.get(i).getName();
+				labelsJSON += "'},";
+			}
+			labelsJSON+="{'labelName':'";
+			labelsJSON+= labelList.get(labelList.size()-1).getName();
+			labelsJSON+="'}";
 		}
-		labelsJSON+="{'labelName':'";
-		labelsJSON+= labelList.get(labelList.size()-1).getName();
-		labelsJSON+="'}";
+	
 		labelsJSON += "]";
 		
 		casesJSON = "[";

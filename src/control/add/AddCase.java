@@ -100,8 +100,9 @@ public class AddCase extends ActionSupport {
 		}else{
 			System.out.println();
 			Case newCase = new Case();
-			newCase.setName(Base64.encode(new String(caseName.getBytes("iso-8859-1"),"utf-8").getBytes()));
-			newCase.setDescribe(Base64.encode(new String(caseDescribe.getBytes("iso-8859-1"),"utf-8").getBytes()));
+			System.out.println("添加的case描述是:"+caseDescribe);
+			newCase.setName(caseName);
+			newCase.setDescribe(caseDescribe);
 			newCase.setHeadimg(imageHeadName);
 			newCase.setImages(imageBodyNames);
 			newCase.setTimestamp(new Timestamp(new Date().getTime()));

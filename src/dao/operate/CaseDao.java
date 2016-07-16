@@ -27,7 +27,9 @@ public class CaseDao {
 		int result = 0;
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
+		System.out.println("这里是CaseDao，case描述:"+newCase.getDescribe());
 		result = (Integer) session.save(newCase);
+		System.out.println("result"+result);
 		transaction.commit();
 		session.close();
 		return result;

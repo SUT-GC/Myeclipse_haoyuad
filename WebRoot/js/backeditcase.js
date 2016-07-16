@@ -285,6 +285,9 @@ $(document).ready(function(){
 		new_case_label_id = $(this).val();
 	});
 	$(".editcase_sub_button").click(function(){
+		if(!confirm("您确认要进行修改么?")){
+			return;
+		}
 		var new_case_name = $(".new_case_name").val();
 		var new_case_describe = $(".new_case_describe").val();
 		var caseId = $(".new_case_id").text();

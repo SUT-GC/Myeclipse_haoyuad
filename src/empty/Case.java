@@ -10,8 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="hyad_case")
@@ -20,8 +23,10 @@ public class Case {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="case_id")
 	private int id;
+	@Type(type="text")  
 	@Column(name="case_name")
 	private String name;
+	@Type(type="text")  
 	@Column(name="case_describe")
 	private String describe;
 	@Column(name="case_headimg")
