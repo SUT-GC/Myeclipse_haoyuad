@@ -2,13 +2,14 @@ package dao.operate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-import org.apache.commons.codec.binary.Base64;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import util.ApplicationContextUtil;
+import empty.Case;
 import empty.Label;
 
 /**
@@ -194,6 +195,25 @@ public class LabelDao {
 		transaction.commit();
 		session.close();
 		return labelList;
+	}
+	
+	/**
+	 * 8 查询出labelid下的所有的cases
+	 * @param int labelid;
+	 * @return Set<Case> caseSet
+	 */
+	public static Set<Case> selectCasesByLabelId(int labelid){
+
+		Set<Case> caseSet = null;
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		Label alabel = (Label) session.get(Label.class, labelid);
+		caseSet = alabel.getCases();
+		
+		transaction.commit();
+		session.close();
+		return caseSet;
 	}
 }
 

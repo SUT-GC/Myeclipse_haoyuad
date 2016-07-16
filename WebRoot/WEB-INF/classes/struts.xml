@@ -332,6 +332,12 @@
 			<param name="inputName">inputStream</param>
 		</result>
 	</action>
-	
+	<!-- Ajax 项目展示 查询处某label下的所有cases -->
+	<action name="selectcases" class="control.select.SelectCases">
+		<result name="success" type="stream">
+				<param name="inputType">text/html</param>
+				<param name="inputName">inputStream</param>
+		</result>
+	</action>
 </package>
 </struts>    

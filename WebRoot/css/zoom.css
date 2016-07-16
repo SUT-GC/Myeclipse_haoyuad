@@ -41,7 +41,7 @@
 	width: 49px;
 	height: 49px;
 	cursor: pointer;
-	background: transparent url('../image/icons/close.png') no-repeat 50% 50%;
+	background: transparent url('../images/icons/close.png') no-repeat 50% 50%;
 	opacity: 1;
 	filter: alpha(opacity=100);
 	border-radius: 0 0 0 4px;

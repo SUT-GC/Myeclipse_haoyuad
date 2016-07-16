@@ -17,7 +17,7 @@ $(document).ready(function(){
 	$(".show_eachcase_all").hide();
 
 
-	$(".each_case").click(function(){
+	$(document).on('click','.each_case',function(){
 		
 		var id=$(this).find(".case_id").text();
 		if(id==""||id.length==0||isNaN(id)==true){
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			caseid:id
 		},function(data){
 			var acase = eval('('+data+')');
-			var labelname = $(".caselabel.active").text();
+			var labelname = $(".active").text();
 			$(".show_eachcase_all .show_eachcase_nav span:first a").text(labelname);
 			$(".show_eachcase_all .show_eachcase_nav span:last a").text(acase.name);
 			$(".show_eachcase_all .show_eachcase_info pre").text(acase.describe);
@@ -48,5 +48,23 @@ $(document).ready(function(){
 		$(".show_eachcase_all").hide();
 		$(".case_show").show();
 	});
-
+	
+	$(".caselabel").click(function(){
+		$(".show_eachcase_all").hide();
+		$(".case_show").show();
+		var labelid = $(this).next(".label_id").text();
+		$(".active").removeClass("active");
+		$(this).addClass("active");
+		
+		$.post("selectcases",{
+			'labelid':labelid
+		},function(data){
+			var cases = eval('('+data+')');
+			$(".case_show ").empty();
+			for(var i = 0; i < cases.length-1; i++){
+				var new_case = '<div class="each_case" style="width:'+case_each_width+';height:'+case_each_height+';" ><a href="#"><div class="case_id" style="display:none">'+cases[i].id+'</div><div class="case_img"><img style="width:'+(case_each_width-2)+';height:'+case_each_width+';" src="http://7xrh7n.com1.z0.glb.clouddn.com/'+cases[i].headimg+'"/></div><div class="case_infor">'+cases[i].name+'</div></a></div>';
+				$(".case_show ").append(new_case);
+			}
+		})
+	});
 });

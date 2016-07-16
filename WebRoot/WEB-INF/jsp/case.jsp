@@ -66,9 +66,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<div class="case_nav ">
     		<div class="alert alert-success case_cloud" role="alert">案例分类</div>
     		<div class="list-group">
-			  <a href="#" class="list-group-item caselabel active" id="allcase_label">全部 </a>
+			  <a href="case" class="list-group-item  active" id="allcase_label">全部 </a>
 				<s:iterator value="labelList">
-			  		<a href="#" class="list-group-item caselabel" ><s:property value="name"/></a><span style="display:none;" class="case_id"><s:property value="id"/></span>
+			  		<a href="#" class="list-group-item caselabel" ><s:property value="name"/></a><span style="display:none;" class="label_id"><s:property value="id"/></span>
 			   </s:iterator>
 		</div>
 	</div>
