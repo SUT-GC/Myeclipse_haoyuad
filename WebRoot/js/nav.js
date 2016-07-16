@@ -16,25 +16,25 @@ $(document).ready(function(){
 	$(".nav").find("a").click(function(){
 		name = this.text;
 		if(name=="网站首页"){
-			window.location.href="index.html";
+			window.location.href="index";
 		}
 		if(name=="工作流程"){
-			window.location.href="workflow.html";
+			window.location.href="workflow";
 		}
 		if(name=="公司简介"){
-			window.location.href="companyinfor.html";
+			window.location.href="companyinfor";
 		}
 		if(name=="经典案例"){
-			window.location.href="case.html";
+			window.location.href="case";
 		}
 		if(name=="主创团队"){
-			window.location.href="team.html";
+			window.location.href="team";
 		}
 		if(name=="招兵买马"){
-			window.location.href="recruit.html";
+			window.location.href="recruit";
 		}
 		if(name=="联系我们"){
-			window.location.href="tellme.html";
+			window.location.href="tellme";
 		}
 	});
 

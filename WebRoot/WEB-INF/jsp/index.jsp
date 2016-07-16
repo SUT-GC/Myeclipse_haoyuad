@@ -152,7 +152,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <ul>
               <li>
                 <div>
-                	<a href="#">
+                	<a href="case">
 	                  <img id="works_img_11" class="works_img" src="images/background.png">
 	                  <div class="works_img_dis" id="works_img_dis_11">
 	                    东北大秧歌
@@ -162,7 +162,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img id="works_img_12"  class="works_img" src="images/background.png">
                   <div class="works_img_dis"  id="works_img_dis_12">
                     向阳中学战狼
@@ -172,7 +172,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_13" class="works_img" src="images/background.png">
                   <div  id="works_img_dis_13" class="works_img_dis">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -182,7 +182,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_14" class="works_img" src="images/background.png">
                   <div class="works_img_dis"  id="works_img_dis_14">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -192,7 +192,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_15" class="works_img" src="images/background.png">
                   <div  id="works_img_dis_15" class="works_img_dis">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -214,7 +214,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              <ul>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img id="works_img_21" class="works_img" src="images/background.png">
                   <div class="works_img_dis" id="works_img_dis_21">
                     东北大秧歌
@@ -224,7 +224,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img id="works_img_22"  class="works_img" src="images/background.png">
                   <div class="works_img_dis"  id="works_img_dis_22">
                     向阳中学战狼
@@ -234,7 +234,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_23" class="works_img" src="images/background.png">
                   <div  id="works_img_dis_23" class="works_img_dis">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -244,7 +244,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_24" class="works_img" src="images/background.png">
                   <div class="works_img_dis"  id="works_img_dis_24">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -254,7 +254,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_25" class="works_img" src="images/background.png">
                   <div  id="works_img_dis_25" class="works_img_dis">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -276,7 +276,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              <ul>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img id="works_img_31" class="works_img" src="images/background.png">
                   <div class="works_img_dis" id="works_img_dis_31">
                     东北大秧歌
@@ -286,7 +286,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img id="works_img_32"  class="works_img" src="images/background.png">
                   <div class="works_img_dis"  id="works_img_dis_32">
                     向阳中学战狼
@@ -296,7 +296,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_33" class="works_img" src="images/background.png">
                   <div  id="works_img_dis_33" class="works_img_dis">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -306,7 +306,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_34" class="works_img" src="images/background.png">
                   <div class="works_img_dis"  id="works_img_dis_34">
                     ssssssssssssssssssssssssssssssssssssssssss
@@ -316,7 +316,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </li>
               <li>
                 <div>
-                <a href="#">
+                <a href="case">
                   <img  id="works_img_35" class="works_img" src="images/background.png">
                   <div  id="works_img_dis_35" class="works_img_dis">
                     ssssssssssssssssssssssssssssssssssssssssss

@@ -9,6 +9,7 @@ $(document).ready(function(){
 	    windowHeight = $(window).height();
 		
 	function open(event) {
+//		alert(1);
 		if (event)
 			event.preventDefault();
 		var link = $(this),
@@ -119,7 +120,9 @@ $(document).ready(function(){
 
 		if ($('.gallery li a').length == 1)
 			$('.gallery li a')[0].addClass('zoom');
-		$('.zoom, .gallery li a').on('click', open);
+		$(document).on('click','.gallery li a', open);
+		$(document).on('click','.zoom', open);
+//		$('.zoom, .gallery li a').on('click', open);
 	})();
 
 	(function bindChangeImageDimensions() {

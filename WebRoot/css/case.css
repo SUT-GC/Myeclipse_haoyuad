@@ -30,8 +30,26 @@
 	margin-bottom: 20px;
 	border: 2px solid #DDDDDD;
 	border-radius: 0px, 0px, 5px, 5px;
+	background-color: #eee;
 }
 .case_img{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	overflow: hidden;
+}
+.case_img img:hover{
+	transform: scale(1.2);
+	-ms-transform: scale(1.2);	/* IE 9 */
+	-webkit-transform: scale(1.2);	/* Safari 和 Chrome */
+	-o-transform: scale(1.2);	/* Opera */
+	-moz-transform: scale(1.2);	
+}
+.case_img img{
+	transition: all 2s;
+	-moz-transition: all 2s;	/* Firefox 4 */
+	-webkit-transition: all 2s;	/* Safari 和 Chrome */
+	-o-transition: all 2s;
 }
 .case_infor{
 	text-align: center;
@@ -62,8 +80,8 @@
 	padding-top: 10px;
 }
 .container img{
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 }
 .gallery li:nth-child(6n){padding-right:0;}
 .show_eachcase_nav{

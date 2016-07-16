@@ -307,6 +307,31 @@
 	<action name="index" class="control.jspmap.Index">
 		<result name="success">/WEB-INF/jsp/index.jsp</result>
 	</action>
+	<action name="workflow">
+		<result>/WEB-INF/jsp/workflow.jsp</result>
+	</action>
+	<action name="companyinfor">
+		<result>/WEB-INF/jsp/companyinfor.jsp</result>
+	</action>
+	<action name="team">
+		<result>/WEB-INF/jsp/team.jsp</result>
+	</action>
+	<action name="recruit">
+		<result>/WEB-INF/jsp/recruit.jsp</result>
+	</action>
+	<action name="tellme">
+		<result>/WEB-INF/jsp/tellme.jsp</result>
+	</action>
+	<action name="case" class="control.jspmap.ShowCases">
+		<result>/WEB-INF/jsp/case.jsp</result>
+	</action>
+	<!--Ajax 项目展示界面。根据项目id查询项目其他信息 -->
+	<action name="selectcase" class="control.select.SelectCase">
+		<result name="success" type="stream">
+			<param name="inputType">text/html</param>
+			<param name="inputName">inputStream</param>
+		</result>
+	</action>
 	
 </package>
 </struts>    
