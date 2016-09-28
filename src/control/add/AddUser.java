@@ -86,7 +86,7 @@ public class AddUser extends ActionSupport {
 			
 			//向新的Admin中装入信息 将相关信息进行转码
 			//这一步是因为web前端传过来的数据是8859_1(西欧语言)的编码
-			newAdmin.setName(Base64.encodeBase64String( newusername.getBytes("8859_1")));
+			newAdmin.setName(Base64.encodeBase64String( newusername.getBytes("utf-8")));
 			newAdmin.setAccount(newuseraccount);
 			newAdmin.setPass(MD5Util.MD5ToString(newuserpass));
 			newAdmin.setPower(0);

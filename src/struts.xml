@@ -16,11 +16,11 @@
 	</interceptors>
 	<!-- 注册拦截器  end-->
 	
-	<default-action-ref name="welcome" />
+	<default-action-ref name="index" />
 	
 	<!-- 测试struts 所用的action -->
 	<action name="backindex" class="test">
-		<result>/WEB-INF/index.jsp</result>
+		<result>/WEB-INF/jsp/index.jsp</result>
 	</action>
 	<action name="backlogin">
 		<result>/WEB-INF/jsp/backlogin.jsp</result>

@@ -9,6 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>浩宇广告公司</title>
+<link rel="bookmark" type="image/x-icon" href="http://7xrh7n.com1.z0.glb.clouddn.com/logo.jpg"/>
+<link rel="shortcut icon" href="http://7xrh7n.com1.z0.glb.clouddn.com/logo.jpg"> 
+<link rel="icon" href="http://7xrh7n.com1.z0.glb.clouddn.com/logo.jpg">
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -74,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 <div class='all'>
   <div class="wangzhan_headlogo">
-    
+    <img style="width:100%; height:100%;" alt="" src="http://7xrh7n.com1.z0.glb.clouddn.com/1.jpg">
   </div>
 <!--导航start-->
     <div class="wraper">
@@ -94,7 +97,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
     <!--导航end-->
-
     <!--轮幕start-->
     <div class="lunmu">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -108,17 +110,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="images/1.png" alt="">
+              <img src="http://7xrh7n.com1.z0.glb.clouddn.com/2.jpg" alt="">
               <div class="carousel-caption">
               </div>
             </div>
             <div class="item">
-              <img src="images/1.png" alt="">
+              <img src="http://7xrh7n.com1.z0.glb.clouddn.com/4.jpg" alt="">
               <div class="carousel-caption">
               </div>
             </div>
              <div class="item">
-              <img src="images/1.png" alt="">
+              <img src="http://7xrh7n.com1.z0.glb.clouddn.com/4-.jpg" alt="">
               <div class="carousel-caption">
               </div>
             </div>
@@ -138,8 +140,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!--轮幕end-->
     <!--介绍业务的图片 start -->
     <div class='indeximg'>
+    	<img alt="公司业务" src="http://7xrh7n.com1.z0.glb.clouddn.com/5.jpg">
     </div>
     <!--介绍业务的图片 end -->
+     <!--片尾图片展示start
+    <div class="showfooterimg">
+      <img alt="" src="http://7xrh7n.com1.z0.glb.clouddn.com/3.jpg">
+    </div>
+      片尾图片展示end-->
     <!--公司图片展示区start-->
     <div class="showworks">
       <!--列出三个展示 start-->
@@ -331,10 +339,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       </div>
        <!--列出三个展示 end-->
     </div>
-    <!--公司图片展示区end-->
+    <!--图片展示区end-->
+   
     <!--片尾start-->
     <div class="allfoot">
-      
+      <img style="width:100%; height:100%;" alt="尾部照片" src="http://7xrh7n.com1.z0.glb.clouddn.com/6.jpg">
     </div>
     <!--片尾end-->
 </div>

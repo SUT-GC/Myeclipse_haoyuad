@@ -60,8 +60,8 @@ public class UpdateLabel extends ActionSupport {
 				result = -3;
 			} else {
 				// 1:更新成功 -1:labelid没找到 0:数据库出错
-				newlabelname = Base64.encodeBase64String(newlabelname
-						.getBytes("8859_1"));
+//				newlabelname = Base64.encodeBase64String(newlabelname
+//						.getBytes("8859_1"));
 				result = LabelDao.updateLabelById(oldlabelid, newlabelname);
 			}
 		}

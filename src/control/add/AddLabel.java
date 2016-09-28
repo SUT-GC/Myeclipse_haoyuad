@@ -40,7 +40,7 @@ public class AddLabel extends ActionSupport {
 		//创建result
 		int result;
 		//进行转换
-		labelname = new String(labelname.getBytes("8859_1"));
+//		labelname = new String(labelname.getBytes("8859_1"));
 
 		//判断session是否已经过期， 如果过期，则进行页面跳转
 		if(ServletActionContext.getRequest().getSession().getAttribute("sessionout") == null || ServletActionContext.getRequest().getSession().getAttribute("sessionout").equals("yes")){

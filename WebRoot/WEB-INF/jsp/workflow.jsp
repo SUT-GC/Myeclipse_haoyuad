@@ -9,6 +9,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>浩宇广告公司</title>
+<link rel="bookmark" type="image/x-icon" href="http://7xrh7n.com1.z0.glb.clouddn.com/logo.jpg"/>
+<link rel="shortcut icon" href="http://7xrh7n.com1.z0.glb.clouddn.com/logo.jpg"> 
+<link rel="icon" href="http://7xrh7n.com1.z0.glb.clouddn.com/logo.jpg">
+
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -28,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 <div class="wfall">
 	<div class="wangzhan_headlogo">
-    
+    	<img style="width:100%; height:100%;" alt="" src="http://7xrh7n.com1.z0.glb.clouddn.com/1.jpg">
   	</div>
 	<!--导航start-->
    	<div class="wraper">
@@ -50,12 +54,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--导航end-->
 	<!--工作流程介绍start-->
 	<div class="wf">
-
+		<img style="width:100%; height:100%;" alt="工作流程" src="http://7xrh7n.com1.z0.glb.clouddn.com/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg"/>
 	</div>
 	<!--工作流程介绍end-->
 	<!--片尾start-->
 	<div class="allfoot">
-	      
+	      <img style="width:100%; height:100%;" alt="尾部照片" src="http://7xrh7n.com1.z0.glb.clouddn.com/6.jpg">
 	</div>
 	<!--片尾end-->
 </div>
